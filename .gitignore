@@ -1,2 +1,12 @@
 # VSCode
 .vscode/
+
+# Environments
+.env
+env/
+
+# Log
+*.log
+
+# すべての .gitkeep は Git管理対象内 にする
+!.gitkeep
