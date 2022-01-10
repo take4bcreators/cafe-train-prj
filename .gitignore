@@ -3,7 +3,7 @@
 
 # Environments
 .env
-env/
+env/*
 
 # Log
 *.log
