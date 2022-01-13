@@ -6,7 +6,6 @@
 env/*
 
 # Log
-log/*
 *.log
 
 # すべての .gitkeep は Git管理対象内 にする
