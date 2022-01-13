@@ -22,8 +22,12 @@ feature/#nn_トピックブランチ名
 「#nn」の部分には、GitHubの Issue 番号を割り当てる。
 なければ #xx としておく。
 
-（例）
+**（例）**
 feature/#12_replace_to_hamburger_menu
 feature/#20_add_rule_doc
 
+
+## 開発を開始•再開する時の注意点
+開発を再開する時などは必ず、「pull（プル）」をして最新の状態を取り込み、
+編集の競合が起きないように注意する。
 
