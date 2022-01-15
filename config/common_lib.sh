@@ -2,9 +2,9 @@
 
 # 重要度
 ERR=error
-WRN=warning
-INF=info
-DEB=debug
+WARN=warning
+INFO=info
+DEBUG=debug
 SEP="\t"
 
 LOG_FILE_NAME=$LOG_DIR/$MOD_GRP_NAME/$MOD_GRP_NAME_$(date +%Y%m%d).log
@@ -13,7 +13,7 @@ LOG_FILE_NAME=$LOG_DIR/$MOD_GRP_NAME/$MOD_GRP_NAME_$(date +%Y%m%d).log
 # 引数
 #   1：重要度を示す変数
 #   2：ログに出力するメッセージ
-# 使用例：log_msg $INF "実行開始"
+# 使用例：log_msg $INFO "実行開始"
 # 出力例：2022/01/01 10:01:36 info pid:3001 import_mst_prefectures_csv.sh 実行開始
 function log_msg() {
     local logdata="$(date '+%Y/%m/%d %H:%M:%S')"
