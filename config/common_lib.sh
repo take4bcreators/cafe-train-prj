@@ -7,7 +7,7 @@ INFO=info
 DEBUG=debug
 SEP="\t"
 
-LOG_FILE_NAME=$LOG_DIR/$MOD_GRP_NAME/$MOD_GRP_NAME_$(date +%Y%m%d).log
+LOG_FILE_NAME="${LOG_DIR}/${MOD_GRP_NAME}/${MOD_GRP_NAME}_$(date +%Y%m%d).log"
 
 # ログ出力用関数
 # 引数
