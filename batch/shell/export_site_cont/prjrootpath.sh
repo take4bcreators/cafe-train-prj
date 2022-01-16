@@ -1,4 +1,4 @@
 #!/bin/bash
 
-PROJECT_ROOT=$(cd ../../../;pwd)
+export PROJECT_ROOT=$(cd ../../../;pwd)
 

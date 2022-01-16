@@ -122,8 +122,11 @@ psql -U cafe -d cafeindb001
 -- ユーザ名と同じ名前のスキーマを作成する
 CREATE SCHEMA AUTHORIZATION cafe;
 
--- deve スキーマの作成
-CREATE SCHEMA deve;
+-- prd スキーマの作成
+CREATE SCHEMA prd;
+
+-- dev スキーマの作成
+CREATE SCHEMA dev;
 
 -- work スキーマの作成
 CREATE SCHEMA work;
