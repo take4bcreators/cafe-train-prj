@@ -1,5 +1,11 @@
 #!/bin/bash
 
+##### 環境変数の設定チェック #####
+if [ -z "${PROJECT_ROOT}" ]; then
+    echo "ERROR プロジェクトパスが設定されていません"
+    exit 1
+fi
+
 ##### 引数チェック #####
 # 数チェック
 if [ $# != 2 ]; then
@@ -15,12 +21,6 @@ EXEC_SHELL_NAME=$2
 if [ ! -f ${exec_sql_file_path} ]; then
     echo "ERROR 実行SQLファイルが存在しません"
     echo "指定されたファイル名：${exec_sql_file_path}"
-    exit 1
-fi
-
-##### 環境変数の設定チェック #####
-if [ -z "${PROJECT_ROOT}" ]; then
-    echo "ERROR プロジェクトパスが設定されていません"
     exit 1
 fi
 
@@ -57,11 +57,11 @@ source ${ENV_DIR}/.env
 ##### メイン処理 #####
 log_msg ${INFO} "実行開始"
 psql -d ${DB_NAME} -U ${DB_USER} -f "${exec_sql_file_path}" -v schema=${DB_SCHEMA} > ${STD_OUT_FILE} 2> ${STD_ERR_FILE}
-log_msg ${INFO} "PSQL出力メッセージ\n""${STD_OUT_FILE}"
+log_msg ${INFO} "PSQL出力メッセージ...\n""$(cat ${STD_OUT_FILE})"
 
 if [ -s ${STD_ERR_FILE} ]; then
     log_msg ${ERR} "PSQLエラー"
-    log_msg ${ERR} "PSQLエラーメッセージ\n""${STD_ERR_FILE}"
+    log_msg ${ERR} "PSQLエラーメッセージ...\n""$(cat ${STD_ERR_FILE})"
     log_msg ${ERR} "異常終了"
     exit 1
 fi
