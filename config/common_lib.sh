@@ -1,13 +1,42 @@
 #!/bin/bash
 
-# 重要度
-ERR=error
-WARN=warning
-INFO=info
-DEBUG=debug
-SEP="\t"
+# ログ関連の出力指定
+readonly ERR=error
+readonly WARN=warning
+readonly INFO=info
+readonly DEBUG=debug
+readonly sep="\t"
 
+# 必須変数存在確認
+if [ -z "${EXEC_SHELL_NAME}" ]; then
+    echo "ERROR 必須の変数が設定されていません"
+    echo "設定されていない変数：EXEC_SHELL_NAME"
+    exit 1
+fi
+
+if [ -z "${TMP_DIR}" ]; then
+    echo "ERROR 必須の変数が設定されていません"
+    echo "設定されていない変数：TMP_DIR"
+    exit 1
+fi
+
+if [ -z "${LOG_DIR}" ]; then
+    echo "ERROR 必須の変数が設定されていません"
+    echo "設定されていない変数：LOG_DIR"
+    exit 1
+fi
+
+if [ -z "${MOD_GRP_NAME}" ]; then
+    echo "ERROR 必須の変数が設定されていません"
+    echo "設定されていない変数：MOD_GRP_NAME"
+    exit 1
+fi
+
+# 出力ファイル設定
+STD_OUT_FILE="${TMP_DIR}/std_out_$$.tmp"
+STD_ERR_FILE="${TMP_DIR}/std_err_$$.tmp"
 LOG_FILE_NAME="${LOG_DIR}/${MOD_GRP_NAME}/${MOD_GRP_NAME}_$(date +%Y%m%d).log"
+
 
 # ログ出力用関数
 # 引数
@@ -19,12 +48,12 @@ function log_msg() {
     local logdata="$(date '+%Y/%m/%d %H:%M:%S')"
     local pri=$1
     local pid=$$
-    local shlname=$EXEC_SHELL_NAME
+    local shlname=${EXEC_SHELL_NAME}
     local logmsg=$2
     
-    echo -e "${logdata}${SEP}${pri}${SEP}pid:${pid}${SEP}${shlname}${SEP}${logmsg}"
+    echo -e "${logdata}${sep}${pri}${sep}pid:${pid}${sep}${shlname}${sep}${logmsg}"
     
-} >> $LOG_FILE_NAME
+} >> ${LOG_FILE_NAME}
 
 
 
