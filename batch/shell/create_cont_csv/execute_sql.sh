@@ -11,7 +11,7 @@ fi
 exec_sql_file_path=${PROJECT_ROOT}/batch/sql/$1
 EXEC_SHELL_NAME=$2
 
-# SQLファイルチェック
+# SQLファイル存在チェック
 if [ ! -f ${exec_sql_file_path} ]; then
     echo "ERROR 実行SQLファイルが存在しません"
     echo "指定されたファイル名：${exec_sql_file_path}"
@@ -41,7 +41,6 @@ fi
 source ${CONFIG_DIR}/${grp_env_file_name}
 
 # 共通モジュール読み込みファイルの存在チェックと読み込み
-# $EXEC_SHELL_NAME を設定している必要あり
 if [ ! -f ${CONFIG_DIR}/common_lib.sh ]; then
     echo "ERROR 共通モジュール読み込みファイルが存在しません"
     exit 1
@@ -58,7 +57,6 @@ source ${ENV_DIR}/.env
 ##### メイン処理 #####
 log_msg ${INFO} "実行開始"
 psql -d ${DB_NAME} -U ${DB_USER} -f "${exec_sql_file_path}" -v schema=${DB_SCHEMA} > ${STD_OUT_FILE} 2> ${STD_ERR_FILE}
-
 log_msg ${INFO} "PSQL出力メッセージ\n""${STD_OUT_FILE}"
 
 if [ -s ${STD_ERR_FILE} ]; then

@@ -8,7 +8,7 @@ exec_shell_name=$(basename $0)
 
 # プロジェクトパス情報読み込みファイルの存在チェックと読み込み
 if [ ! -f prjrootpath.sh ]; then
-    echo "プロジェクトパス情報読み込みファイルが存在しません"
+    echo "ERROR プロジェクトパス情報読み込みファイルが存在しません"
     exit 1
 fi
 source prjrootpath.sh

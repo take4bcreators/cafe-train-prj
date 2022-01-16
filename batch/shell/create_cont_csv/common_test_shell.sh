@@ -40,13 +40,10 @@ if [ ! -f ${ENV_DIR}/.env ]; then
 fi
 source ${ENV_DIR}/.env
 
-
 ### メイン処理 ###
 log_msg ${INFO} "実行開始"
-
 echo "メイン処理"
 log_msg ${INFO} "メイン処理実行中"
-
 log_msg ${INFO} "実行完了"
 
 exit 0
