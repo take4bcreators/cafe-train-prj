@@ -62,10 +62,12 @@ log_msg ${INFO} "PSQL出力メッセージ...\n""$(cat ${STD_OUT_FILE})"
 if [ -s ${STD_ERR_FILE} ]; then
     log_msg ${ERR} "PSQLエラー"
     log_msg ${ERR} "PSQLエラーメッセージ...\n""$(cat ${STD_ERR_FILE})"
+    rm_std_out_file
     log_msg ${ERR} "異常終了"
     exit 1
 fi
 
+rm_std_out_file
 log_msg ${INFO} "正常終了"
 
 exit 0

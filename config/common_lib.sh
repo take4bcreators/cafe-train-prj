@@ -56,5 +56,15 @@ function log_msg() {
 } >> ${LOG_FILE_NAME}
 
 
-
+# 標準出力ファイルの削除関数
+# 引数 なし
+# 使用例：rm_std_out_file
+function rm_std_out_file() {
+    if [ -f ${STD_OUT_FILE} ]; then
+        rm ${STD_OUT_FILE}
+    fi
+    if [ -f ${STD_ERR_FILE} ]; then
+        rm ${STD_ERR_FILE}
+    fi
+}
 
