@@ -19,7 +19,7 @@ fi
 source ${PROJECT_ROOT}/config/common_env.sh
 
 # 機能別設定読み込みファイルの存在チェックと読み込み
-grp_env_file_name=grp_env_create_cont_csv.sh
+grp_env_file_name=grp_env_create_placesapi_request.sh
 if [ ! -f ${CONFIG_DIR}/${grp_env_file_name} ]; then
     echo "ERROR 機能別設定読み込みファイルが存在しません"
     exit 1
