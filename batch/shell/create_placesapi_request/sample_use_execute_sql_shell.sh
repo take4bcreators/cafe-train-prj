@@ -14,7 +14,7 @@ fi
 source prjrootpath.sh
 
 # SQL実行シェルのパスを指定
-exec_sql_shell_path=${PROJECT_ROOT}/batch/shell/create_cont_csv/execute_sql.sh
+exec_sql_shell_path=${PROJECT_ROOT}/batch/shell/create_placesapi_request/execute_sql.sh
 
 # SQL実行シェル実行
 #   execute_sql.sh 実行SQLファイル名 このシェルのファイル名
