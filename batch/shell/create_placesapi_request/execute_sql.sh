@@ -6,6 +6,7 @@ if [ -z "${PROJECT_ROOT}" ]; then
     exit 1
 fi
 
+
 ##### 引数チェック #####
 # 個数チェック
 if [ $# != 2 ]; then
@@ -23,6 +24,7 @@ if [ ! -f ${exec_sql_file_path} ]; then
     echo "指定されたファイル名：${exec_sql_file_path}"
     exit 1
 fi
+
 
 ##### 共通設定読み込み #####
 # 共通設定読み込みファイルの存在チェックと読み込み
@@ -54,6 +56,7 @@ if [ ! -f ${ENV_DIR}/.env ]; then
 fi
 source ${ENV_DIR}/.env
 
+
 ##### メイン処理 #####
 log_msg ${INFO} "実行開始"
 psql -d ${DB_NAME} -U ${DB_USER} -f "${exec_sql_file_path}" -v schema=${DB_SCHEMA} > ${STD_OUT_FILE} 2> ${STD_ERR_FILE}
@@ -62,12 +65,12 @@ log_msg ${INFO} "PSQL出力メッセージ...\n""$(cat ${STD_OUT_FILE})"
 if [ -s ${STD_ERR_FILE} ]; then
     log_msg ${ERR} "PSQLエラー"
     log_msg ${ERR} "PSQLエラーメッセージ...\n""$(cat ${STD_ERR_FILE})"
-    rm_std_out_file
+    delete_std_out_file
     log_msg ${ERR} "異常終了"
     exit 1
 fi
 
-rm_std_out_file
+delete_std_out_file
 log_msg ${INFO} "正常終了"
 
 exit 0

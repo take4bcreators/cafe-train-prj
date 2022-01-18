@@ -40,14 +40,11 @@ STD_ERR_FILE="${TMP_DIR}/std_err_$$.tmp"
 LOG_FILE_NAME="${LOG_DIR}/${MOD_GRP_NAME}/${MOD_GRP_NAME}_$(date +%Y%m%d).log"
 
 
-#####################################
-# ログ出力用関数
-# 引数
-#   1：重要度を示す変数
-#   2：ログに出力するメッセージ
-# 使用例：log_msg $INFO "実行開始"
-# 出力例：2022-01-01 10:01:36 INFO pid:3001 import_mst_prefectures_csv.sh 実行開始
-#####################################
+# 【ログ出力用関数】
+#   [引数1] 重要度を示す変数
+#   [引数2] ログに出力するメッセージ
+#   [使用例] log_msg $INFO "実行開始"
+#   [ログ出力例] 2022-01-01 10:01:36 INFO pid:3001 import_mst_prefectures_csv.sh 実行開始
 function log_msg() {
     local logdata="$(date '+%Y-%m-%d %H:%M:%S')"
     local pri=$1
@@ -60,12 +57,10 @@ function log_msg() {
 } >> ${LOG_FILE_NAME}
 
 
-#####################################
-# 標準出力ファイルの削除関数
-# 引数 なし
-# 使用例：rm_std_out_file
-#####################################
-function rm_std_out_file() {
+# 【標準出力ファイルの削除関数】
+#   [引数] なし
+#   [使用例] delete_std_out_file
+function delete_std_out_file() {
     if [ -f ${STD_OUT_FILE} ]; then
         rm ${STD_OUT_FILE}
     fi
