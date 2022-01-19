@@ -6,4 +6,10 @@ Google Cloud Platform の Places API に実際にリクエストを送り、
 レスポンスデータを DB に格納する。
 
 ## 2. 個別処理概要
-- カフェ情報読み込み (一時CSV → Places API → 一時CSV → カフェ情報TBL)
+- カフェ情報取得 (PlacesAPIリクエスト用CSV → Places API → カフェ情報一時CSV)
+- カフェ情報読込 (カフェ情報一時CSV → カフェ情報TBL)
+- カフェ情報蓄積テーブル挿入 (カフェ情報TBL → カフェ情報蓄積TBL)
+
+## 3. 処理フロー
+
+![](01510202_PlacesAPIリクエスト実行_処理フロー図.drawio.svg)
