@@ -6,7 +6,7 @@ db_name='cafeindb001'
 db_user='cafe'
 tablelist_file='./tablelist.txt'
 file_ext='.sql'
-create_ddl_dir='../create_ddl'
+create_ddl_dir='../001_create_table_ddl'
 
 # カウント用変数
 exec_sql_count=0
