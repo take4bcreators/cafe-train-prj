@@ -1,5 +1,5 @@
 CREATE TABLE :schema.mst_original_definition_line (
-    line_code TEXT ,
+    line_code TEXT,
     line_definition_code TEXT,
     line_definition_name TEXT,
     line_definition_color TEXT,
