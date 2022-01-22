@@ -11,5 +11,8 @@ env/*
 # Tmp
 tmp/*
 
+# Work
+work/*
+
 # すべての .gitkeep は Git管理対象内 にする
 !.gitkeep
