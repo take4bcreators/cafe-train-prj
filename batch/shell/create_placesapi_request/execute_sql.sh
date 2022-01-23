@@ -62,9 +62,9 @@ log_msg ${INFO} "実行開始"
 psql -d ${DB_NAME} -U ${DB_USER} -f "${exec_sql_file_path}" -v schema=${DB_SCHEMA} > ${STD_OUT_FILE} 2> ${STD_ERR_FILE}
 
 if [ -s ${STD_OUT_FILE} ]; then
-    log_msg ${INFO} "PSQL出力メッセージ...\n""$(cat ${STD_OUT_FILE})"
+    log_msg ${INFO} "PSQL標準出力メッセージ...\n""$(cat ${STD_OUT_FILE})"
 else
-    log_msg ${INFO} "PSQL出力メッセージ なし"
+    log_msg ${INFO} "PSQL標準出力メッセージ なし"
 fi
 
 if [ -s ${STD_ERR_FILE} ]; then
