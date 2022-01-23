@@ -1,0 +1,409 @@
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1325px" height="1125px" viewBox="-0.5 -0.5 1325 1125" content="&lt;mxfile&gt;&lt;diagram id=&quot;FCqHonflpCRpP8fUchlA&quot; name=&quot;ページ1&quot;&gt;7V1bc6M2FP41PHaG++URkni3nd1OZtNpn4lRbCbYuJjc+usrCQkbJBkcA4KYbWcXDgJJ5/6Jg6wYN5v3b1m4W/9MI5Aouhq9K8atouuaYxnwH0T5IBTV1QvKKosjQjsQHuL/AG1IqC9xBPaVhnmaJnm8qxKX6XYLlnmFFmZZ+lZt9pQm1V534QowhIdlmLDUf+IoXxdUU1XVw4XvIF6t8/qVTUhbE8J+HUbp2xHJuFOMmyxN8+Jo834DEsQ+ypjivoXgqm5YxXNfw+SFjFa5cxXXUNwb5c5WPE/xF6Tr/INOKEmXzwA9QlOMgM4hA9u8XZ8222e9hyx92Ua4CxV28baOc/CwC5fo6hvUEkhb55uEjOApTpKbNEkzfK+xwH8gfZ9n6TM4umLjP+UVKgwLPSPd5kRzNJU7qwOvQJaD9yPRknl+A+kG5NkHbPJOBVnc8VE9fTsogWZQya6PFEDTKDUkqrcqn33gLDwgzOUzWuOI1kCi9TV8oCu+SSiBwUjgXLFC5p4jVq1ZrKWuI3msknC/J8f7Z5Av1+QECW4RbuIEMfk7SF5BHi/DqkRdnjKYvqsHfqP6UCWxS6Vg5F9l02mVqOtEKeljpSjtv6IUdgc6AafNSOk+QRLQVf/+d/g31RGf6siCHrjkIPBIGxdSTCW4VTzsK+CpB4doJ3DAwWMGj1bo6BcS+fKZ3ONZtINbqnvwZkvxAp4SXuIGasZOr2zTLWjlAdA5Ty3CJF5tIS0BT2h6ezieeLv6gc+wlhDKLyI6mz6bTEukMt06Fp2nQmYHGmRoTrOdr6DgdnUTrpjtsT0n4SNI7tN9nMcp4uwSMgZAtgeIIdCYkx+1Bo9pnqebI1kwd/jkQp7uTtktifjhIx24KhCO2J7dmj3brCzM3kRhMKL4I1A19B9rh5QC1XNbkZb97wtKHwLInPw3wlEftsAKXl4tHwONFfqE4A7lCYGGg4mH7fgWH2iKZ6A20LUit+Cgv2EuQTqHUyr6r44JjfLzI+pqYoVTs4/8UuGyKMUPjhxfQfEOAZQ4R61+O2wsmvzJ6Cj2bDBuGZd4th3IYqhsIHsoPBVpVhqrdire9m6sxH3+hU5u9QMhIM85phGve0ShXleveV21Vewmzo219kGsmQ3NjIrAWyBqAc3BMNzvCijzFL8jleLriij1uYxZ9JaaZ+QFKZaVXWS+Bo9zEcRk5JRayjrcoVMSBRAXAqENYr0PwuXzCjehXIvAU/iCrbtNIsokFofbwTbyEdZEFoPwVUFaxEmZDrdEM0YpPzTl02kq5FD6ki1BLZ7kYbYCVMq6y5dyBpIwj1+rPfCkRm69T2PYd6kdhmdV1cOtCb4YBLmrJvtyGC3VYU5ZKsmjxJSl0CZeyqI3pSw95x/iLm8e/kadQUiEQIuL+g7ET5yD+tiCui4xqOvexIK6iFnyg7qhNrPyery4pUv04ga7tki8uNEj8HQUN1D8G7xA7eAVKhgK7hTPR5egU0ZoDEYA+L95FAqgv3bwKpaDDmDjGYrOUWsCUctQ+fY/iH3rE4taImaNIGqxa3RXHLXs+uuPQaMWu8BCopbZFnsMFoJmNPJl/boh0a9zXveP268LmDUCv97idff1+HXHlunX2eU94tetHtFIkVE71RwbZt0LFBPcBc7VLeSdPUewZjUDlRmofIWAZksMaOxy8sgDmoBZIwhoLVYqryeguTLrOuhD2IBmtwUqY4hOM4b5si7fk+fyTU5d67hdvoBZ8l2+2WKZ73pc/qHsVorPF9byOR2AmAyPllvM1xwMivJfGlRIBS+k0OjianVKmcgHRjcoRjT+zvgw45irD2qFN5QU1KZW+ydi1giCWos1zisKaprMOgGTXSQlQc1tC2QGC1CHgczoZOKO3JLoyFuUmo7LkQuYNQJH7rKcG0MRt6uMuYabFthWargNQZC4sIbb9GraYfVXw216szacrw20UK+qDeaF2tDahKk+zEI7S2gmT2iCutwehKbNQvuE0ByO0ExBWVoPQuOkGbPQmoRGU76q0AQ1Jz0Ijf3ifRZas9B4X6mZgveq3QvNbr2+0COql1luY7EM+POv09+cR/Frq+XZNsUqPIyOIT56t0nBekk5vfoMyXhoF2L5ciuRMWB5si+FCMlv4ihC8yuRfLEkzgL5sqFULG9LxPJ2i0XZyy1dOEVaiVCxdI+xc91kp08HepmdT+3TNVuAa2iNIsM6jaM5Wieao38R1pW7FA3IuxYfTEyCd/QWsxqqh2Rli8XIeUuu+m5K5ZZsw2zJZdgtahiHTiiNIRNKmw00OKHUh0woeTVvJkoli297fBO/crLx6yQLv4RS8Qv/1u+J5oxzIhmnYL+TISzBaf2J+2UZp2CKsjNOZ2qlfc7pz04HzDidqWWcItZJSJOcqWWcDWonMeN0TJZz84pm04omXVGrrGjagrLh7lc0nRYrmjNMqMMEa2CY4Mz7K39CSs7QUpoh9yek5A0tpRFCbp4/6Q9oCCD3ie2bhoHczGdmM+T++pDbkQi56XeePUNu0RRlQ253apDbHQ3kpr9CM3nWScCJ7tQgd4PaSYTc7iBvqc/LZXhZd38eXFCPcmJTr35yGd/BecqcsHz5hMUVvPIdRN1bbzx1UcIimqL0hGVqH9i4p3d8GTJhmdpmOSLWyYiyUyuGalA7iQmLNwjiOi9h4S1A9ebBPRZz4YTlxG51fSQsZ/3O2+n9hBz0cwvowEc/5DZnN9PObjwB1hnENlqA6g6yG9EUZWc33tRwcSGvMWQ33tS20BCxTkZIntq+wA1qJzO7sVnOzRUQTRUQtAS0UgHhXFoBQW6tfbWu1bZ2tNSa3Dv8at1zZm04Xxscnja4gs9kuq+H8eaNJz4hNJdXxORduvGEQGjw9PCj94Vhwji0/plGALX4Hw==&lt;/diagram&gt;&lt;/mxfile&gt;">
+    <defs/>
+    <g>
+        <rect x="2" y="2" width="1320" height="1120" fill="#ffffff" stroke="#666666" stroke-width="5" pointer-events="all"/>
+        <rect x="202" y="82" width="1000" height="160" rx="24" ry="24" fill="#ffffff" stroke="#4a82ba" stroke-width="6" pointer-events="all"/>
+        <rect x="2" y="2" width="200" height="40" fill="#666666" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 186px; height: 1px; padding-top: 22px; margin-left: 10px;">
+                        <div data-drawio-colors="color: #FFFFFF; " style="box-sizing: border-box; font-size: 0px; text-align: left;">
+                            <div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: rgb(255, 255, 255); line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; overflow-wrap: normal;">
+                                Place API リクエスト作成
+                                <br/>
+                                Rundeckフロー図
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="10" y="25" fill="#FFFFFF" font-family="Helvetica" font-size="10px" font-weight="bold">
+                    Place API リクエスト作成...
+                </text>
+            </switch>
+        </g>
+        <rect x="242" y="122" width="40" height="40" rx="6" ry="6" fill="#000000" stroke="none" pointer-events="none" transform="translate(2,3)" opacity="0.25"/>
+        <rect x="242" y="122" width="40" height="40" rx="6" ry="6" fill="#82b366" stroke="none" pointer-events="none"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 171px; margin-left: 262px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: none; white-space: nowrap;">
+                                JB010101
+                                <br/>
+                                <span style="text-align: left">
+                                    対象都道府県
+                                </span>
+                                <br style="text-align: left"/>
+                                <span style="text-align: left">
+                                    テーブルトランケート
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="262" y="181" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="10px" text-anchor="middle">
+                    JB01010...
+                </text>
+            </switch>
+        </g>
+        <ellipse cx="262" cy="142" rx="10" ry="10" fill="#ffffff" stroke="none" pointer-events="none"/>
+        <path d="M 287 142 L 344.65 142" fill="none" stroke="#666666" stroke-width="3" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 353.65 142 L 344.65 146.5 L 344.65 137.5 Z" fill="#666666" stroke="#666666" stroke-width="3" stroke-miterlimit="10" pointer-events="none"/>
+        <rect x="362" y="122" width="40" height="40" rx="6" ry="6" fill="#000000" stroke="none" pointer-events="none" transform="translate(2,3)" opacity="0.25"/>
+        <rect x="362" y="122" width="40" height="40" rx="6" ry="6" fill="#82b366" stroke="none" pointer-events="none"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 171px; margin-left: 382px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: none; white-space: nowrap;">
+                                JB010102
+                                <br/>
+                                <span>
+                                    対象都道府県
+                                </span>
+                                <br/>
+                                <span>
+                                    CSV読込
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="382" y="181" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="10px" text-anchor="middle">
+                    JB01010...
+                </text>
+            </switch>
+        </g>
+        <ellipse cx="382" cy="142" rx="10" ry="10" fill="#ffffff" stroke="none" pointer-events="none"/>
+        <rect x="482" y="122" width="40" height="40" rx="6" ry="6" fill="#000000" stroke="none" pointer-events="none" transform="translate(2,3)" opacity="0.25"/>
+        <rect x="482" y="122" width="40" height="40" rx="6" ry="6" fill="#82b366" stroke="none" pointer-events="none"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 171px; margin-left: 502px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: none; white-space: nowrap;">
+                                JB010103
+                                <br/>
+                                <span style="text-align: left">
+                                    独自定義鉄道路線
+                                </span>
+                                <br style="text-align: left"/>
+                                <span style="text-align: left">
+                                    テーブルトランケート
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="502" y="181" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="10px" text-anchor="middle">
+                    JB01010...
+                </text>
+            </switch>
+        </g>
+        <ellipse cx="502" cy="142" rx="10" ry="10" fill="#ffffff" stroke="none" pointer-events="none"/>
+        <rect x="602" y="122" width="40" height="40" rx="6" ry="6" fill="#000000" stroke="none" pointer-events="none" transform="translate(2,3)" opacity="0.25"/>
+        <rect x="602" y="122" width="40" height="40" rx="6" ry="6" fill="#82b366" stroke="none" pointer-events="none"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 171px; margin-left: 622px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: none; white-space: nowrap;">
+                                JB010104
+                                <br/>
+                                <span>
+                                    独自定義鉄道路線
+                                </span>
+                                <br/>
+                                <span>
+                                    CSV読込
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="622" y="181" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="10px" text-anchor="middle">
+                    JB01010...
+                </text>
+            </switch>
+        </g>
+        <ellipse cx="622" cy="142" rx="10" ry="10" fill="#ffffff" stroke="none" pointer-events="none"/>
+        <rect x="722" y="122" width="40" height="40" rx="6" ry="6" fill="#000000" stroke="none" pointer-events="none" transform="translate(2,3)" opacity="0.25"/>
+        <rect x="722" y="122" width="40" height="40" rx="6" ry="6" fill="#82b366" stroke="none" pointer-events="none"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 171px; margin-left: 742px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: none; white-space: nowrap;">
+                                JB010105
+                                <br/>
+                                <span style="text-align: left">
+                                    データ取得対象鉄道路線
+                                </span>
+                                <br style="text-align: left"/>
+                                <span style="text-align: left">
+                                    テーブルトランケート
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="742" y="181" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="10px" text-anchor="middle">
+                    JB01010...
+                </text>
+            </switch>
+        </g>
+        <ellipse cx="742" cy="142" rx="10" ry="10" fill="#ffffff" stroke="none" pointer-events="none"/>
+        <rect x="842" y="122" width="40" height="40" rx="6" ry="6" fill="#000000" stroke="none" pointer-events="none" transform="translate(2,3)" opacity="0.25"/>
+        <rect x="842" y="122" width="40" height="40" rx="6" ry="6" fill="#82b366" stroke="none" pointer-events="none"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 171px; margin-left: 862px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: none; white-space: nowrap;">
+                                JB010106
+                                <br/>
+                                <span>
+                                    データ取得対象鉄道路線
+                                </span>
+                                <br/>
+                                <span>
+                                    CSV読込
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="862" y="181" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="10px" text-anchor="middle">
+                    JB01010...
+                </text>
+            </switch>
+        </g>
+        <ellipse cx="862" cy="142" rx="10" ry="10" fill="#ffffff" stroke="none" pointer-events="none"/>
+        <rect x="962" y="122" width="40" height="40" rx="6" ry="6" fill="#000000" stroke="none" pointer-events="none" transform="translate(2,3)" opacity="0.25"/>
+        <rect x="962" y="122" width="40" height="40" rx="6" ry="6" fill="#82b366" stroke="none" pointer-events="none"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 171px; margin-left: 982px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: none; white-space: nowrap;">
+                                JB010107
+                                <br/>
+                                <span style="text-align: right">
+                                    取得対象カフェチェーン
+                                </span>
+                                <br style="text-align: right"/>
+                                <span style="text-align: right">
+                                    テーブルトランケート
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="982" y="181" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="10px" text-anchor="middle">
+                    JB01010...
+                </text>
+            </switch>
+        </g>
+        <ellipse cx="982" cy="142" rx="10" ry="10" fill="#ffffff" stroke="none" pointer-events="none"/>
+        <rect x="1082" y="122" width="40" height="40" rx="6" ry="6" fill="#000000" stroke="none" pointer-events="none" transform="translate(2,3)" opacity="0.25"/>
+        <rect x="1082" y="122" width="40" height="40" rx="6" ry="6" fill="#82b366" stroke="none" pointer-events="none"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 171px; margin-left: 1102px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: none; white-space: nowrap;">
+                                JB010108
+                                <br/>
+                                <span>
+                                    取得対象カフェチェーン
+                                    <br/>
+                                    CSV読込
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="1102" y="181" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="10px" text-anchor="middle">
+                    JB01010...
+                </text>
+            </switch>
+        </g>
+        <ellipse cx="1102" cy="142" rx="10" ry="10" fill="#ffffff" stroke="none" pointer-events="none"/>
+        <path d="M 407 142 L 464.65 142" fill="none" stroke="#666666" stroke-width="3" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 473.65 142 L 464.65 146.5 L 464.65 137.5 Z" fill="#666666" stroke="#666666" stroke-width="3" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 527 142 L 584.65 142" fill="none" stroke="#666666" stroke-width="3" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 593.65 142 L 584.65 146.5 L 584.65 137.5 Z" fill="#666666" stroke="#666666" stroke-width="3" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 647 142 L 704.65 142" fill="none" stroke="#666666" stroke-width="3" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 713.65 142 L 704.65 146.5 L 704.65 137.5 Z" fill="#666666" stroke="#666666" stroke-width="3" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 767 142 L 824.65 142" fill="none" stroke="#666666" stroke-width="3" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 833.65 142 L 824.65 146.5 L 824.65 137.5 Z" fill="#666666" stroke="#666666" stroke-width="3" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 887 142 L 944.65 142" fill="none" stroke="#666666" stroke-width="3" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 953.65 142 L 944.65 146.5 L 944.65 137.5 Z" fill="#666666" stroke="#666666" stroke-width="3" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 1007 142 L 1064.65 142" fill="none" stroke="#666666" stroke-width="3" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 1073.65 142 L 1064.65 146.5 L 1064.65 137.5 Z" fill="#666666" stroke="#666666" stroke-width="3" stroke-miterlimit="10" pointer-events="none"/>
+        <rect x="122" y="122" width="40" height="40" rx="6" ry="6" fill="#000000" stroke="none" pointer-events="none" transform="translate(2,3)" opacity="0.25"/>
+        <rect x="122" y="122" width="40" height="40" rx="6" ry="6" fill="#4a82ba" stroke="none" pointer-events="none"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-end; width: 1px; height: 1px; padding-top: 142px; margin-left: 118px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: right;">
+                            <div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: none; white-space: nowrap;">
+                                NT0101
+                                <br/>
+                                <div style="text-align: left">
+                                    <span>
+                                        CSV読み込み
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="118" y="145" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="10px" text-anchor="end">
+                    NT0101...
+                </text>
+            </switch>
+        </g>
+        <ellipse cx="142" cy="136" rx="5" ry="5" fill="#ffffff" stroke="none" pointer-events="none"/>
+        <ellipse cx="135" cy="148" rx="5" ry="5" fill="#ffffff" stroke="none" pointer-events="none"/>
+        <ellipse cx="149" cy="148" rx="5" ry="5" fill="#ffffff" stroke="none" pointer-events="none"/>
+        <rect x="202" y="282" width="1000" height="160" rx="24" ry="24" fill="#ffffff" stroke="#4a82ba" stroke-width="6" pointer-events="none"/>
+        <rect x="122" y="322" width="40" height="40" rx="6" ry="6" fill="#000000" stroke="none" pointer-events="none" transform="translate(2,3)" opacity="0.25"/>
+        <rect x="122" y="322" width="40" height="40" rx="6" ry="6" fill="#4a82ba" stroke="none" pointer-events="none"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-end; width: 1px; height: 1px; padding-top: 342px; margin-left: 118px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: right;">
+                            <div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: none; white-space: nowrap;">
+                                NT0102
+                                <br/>
+                                <div style="text-align: left">
+                                    <span>
+                                        鉄道会社情報読込
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="118" y="345" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="10px" text-anchor="end">
+                    NT0102...
+                </text>
+            </switch>
+        </g>
+        <ellipse cx="142" cy="336" rx="5" ry="5" fill="#ffffff" stroke="none" pointer-events="none"/>
+        <ellipse cx="135" cy="348" rx="5" ry="5" fill="#ffffff" stroke="none" pointer-events="none"/>
+        <ellipse cx="149" cy="348" rx="5" ry="5" fill="#ffffff" stroke="none" pointer-events="none"/>
+        <path d="M 142 167 L 142 304.65" fill="none" stroke="#666666" stroke-width="3" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 142 313.65 L 137.5 304.65 L 146.5 304.65 Z" fill="#666666" stroke="#666666" stroke-width="3" stroke-miterlimit="10" pointer-events="none"/>
+        <rect x="202" y="482" width="1000" height="160" rx="24" ry="24" fill="#ffffff" stroke="#4a82ba" stroke-width="6" pointer-events="none"/>
+        <rect x="202" y="682" width="1000" height="160" rx="24" ry="24" fill="#ffffff" stroke="#4a82ba" stroke-width="6" pointer-events="none"/>
+        <rect x="202" y="882" width="1000" height="160" rx="24" ry="24" fill="#ffffff" stroke="#4a82ba" stroke-width="6" pointer-events="none"/>
+        <rect x="122" y="482" width="40" height="40" rx="6" ry="6" fill="#000000" stroke="none" pointer-events="none" transform="translate(2,3)" opacity="0.25"/>
+        <rect x="122" y="482" width="40" height="40" rx="6" ry="6" fill="#4a82ba" stroke="none" pointer-events="none"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-end; width: 1px; height: 1px; padding-top: 502px; margin-left: 118px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: right;">
+                            <div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: none; white-space: nowrap;">
+                                NT0103
+                                <br/>
+                                <div style="text-align: left">
+                                    <span>
+                                        鉄道路線情報読込
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="118" y="505" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="10px" text-anchor="end">
+                    NT0103...
+                </text>
+            </switch>
+        </g>
+        <ellipse cx="142" cy="496" rx="5" ry="5" fill="#ffffff" stroke="none" pointer-events="none"/>
+        <ellipse cx="135" cy="508" rx="5" ry="5" fill="#ffffff" stroke="none" pointer-events="none"/>
+        <ellipse cx="149" cy="508" rx="5" ry="5" fill="#ffffff" stroke="none" pointer-events="none"/>
+        <rect x="122" y="682" width="40" height="40" rx="6" ry="6" fill="#000000" stroke="none" pointer-events="none" transform="translate(2,3)" opacity="0.25"/>
+        <rect x="122" y="682" width="40" height="40" rx="6" ry="6" fill="#4a82ba" stroke="none" pointer-events="none"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-end; width: 1px; height: 1px; padding-top: 702px; margin-left: 118px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: right;">
+                            <div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: none; white-space: nowrap;">
+                                NT0104
+                                <br/>
+                                <div style="text-align: left">
+                                    <span>
+                                        駅情報読込
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="118" y="705" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="10px" text-anchor="end">
+                    NT0104...
+                </text>
+            </switch>
+        </g>
+        <ellipse cx="142" cy="696" rx="5" ry="5" fill="#ffffff" stroke="none" pointer-events="none"/>
+        <ellipse cx="135" cy="708" rx="5" ry="5" fill="#ffffff" stroke="none" pointer-events="none"/>
+        <ellipse cx="149" cy="708" rx="5" ry="5" fill="#ffffff" stroke="none" pointer-events="none"/>
+        <rect x="122" y="882" width="40" height="40" rx="6" ry="6" fill="#000000" stroke="none" pointer-events="none" transform="translate(2,3)" opacity="0.25"/>
+        <rect x="122" y="882" width="40" height="40" rx="6" ry="6" fill="#4a82ba" stroke="none" pointer-events="none"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-end; width: 1px; height: 1px; padding-top: 902px; margin-left: 118px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: right;">
+                            <div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: none; white-space: nowrap;">
+                                NT0105
+                                <br/>
+                                <div style="text-align: left">
+                                    <span>
+                                        リクエストデータ出力
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="118" y="905" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="10px" text-anchor="end">
+                    NT0105...
+                </text>
+            </switch>
+        </g>
+        <ellipse cx="142" cy="896" rx="5" ry="5" fill="#ffffff" stroke="none" pointer-events="none"/>
+        <ellipse cx="135" cy="908" rx="5" ry="5" fill="#ffffff" stroke="none" pointer-events="none"/>
+        <ellipse cx="149" cy="908" rx="5" ry="5" fill="#ffffff" stroke="none" pointer-events="none"/>
+        <path d="M 142 367 L 142 464.65" fill="none" stroke="#666666" stroke-width="3" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 142 473.65 L 137.5 464.65 L 146.5 464.65 Z" fill="#666666" stroke="#666666" stroke-width="3" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 142 527 L 142 664.65" fill="none" stroke="#666666" stroke-width="3" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 142 673.65 L 137.5 664.65 L 146.5 664.65 Z" fill="#666666" stroke="#666666" stroke-width="3" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 142 727 L 142 864.65" fill="none" stroke="#666666" stroke-width="3" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 142 873.65 L 137.5 864.65 L 146.5 864.65 Z" fill="#666666" stroke="#666666" stroke-width="3" stroke-miterlimit="10" pointer-events="none"/>
+    </g>
+    <switch>
+        <g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/>
+        <a transform="translate(0,-5)" xlink:href="https://www.diagrams.net/doc/faq/svg-export-text-problems" target="_blank">
+            <text text-anchor="middle" font-size="10px" x="50%" y="100%">
+                Viewer does not support full SVG 1.1
+            </text>
+        </a>
+    </switch>
+</svg>
