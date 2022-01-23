@@ -4,15 +4,17 @@
 使用ユーザ：admin
 
 ## ジョブフォルダ構成
-- (プロジェクトトップ)
+- cafe-train-prj
   - batch
     - main
-      - create_placesapi_request
-      - execution_placesapi_request
-      - create_site_page_contents
-      - build_static_site_data
-      - deploy_site
+      - NT01
+      - NT02
+      - NT03
+      - NT04
+      - NT05
     - sub
+    - net
+      - NT0101
     - unit
       - JB010101
       - JB010102
@@ -26,5 +28,6 @@
 | JOB ID    | 処理名                                | 実行シェル                            |
 | --------- | ------------------------------------- | ------------------------------------- |
 | JB010101  | 対象都道府県テーブルトランケート      | truncate_mst_target_prefectures.sh    |
+| JB010102  | 対象都道府県CSV読込                   | load_target_prefectures.sh            |
 
 
