@@ -59,7 +59,8 @@ source ${ENV_DIR}/.env
 
 ##### メイン処理 #####
 log_msg ${INFO} "実行開始"
-psql -d ${DB_NAME} -U ${DB_USER} -f "${exec_sql_file_path}" -v schema=${DB_SCHEMA}  -v project_root=${PROJECT_ROOT} > ${STD_OUT_FILE} 2> ${STD_ERR_FILE}
+#psql -d ${DB_NAME} -U ${DB_USER} -f "${exec_sql_file_path}" -v schema=${DB_SCHEMA}  -v project_root=${PROJECT_ROOT} > ${STD_OUT_FILE} 2> ${STD_ERR_FILE}
+psql -d ${DB_NAME} -U ${DB_USER} -f "${exec_sql_file_path}" ${DB_BIND} > ${STD_OUT_FILE} 2> ${STD_ERR_FILE}
 
 if [ -s ${STD_OUT_FILE} ]; then
     log_msg ${INFO} "PSQL標準出力メッセージ...\n""$(cat ${STD_OUT_FILE})"
