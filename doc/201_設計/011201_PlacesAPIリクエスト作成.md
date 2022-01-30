@@ -34,9 +34,10 @@ Google Cloud Platform の Places API のリクエストで使用する、
 - 取得対象チェーンCSV読込 (データ取得対象チェーンCSV → 取得対象チェーンTBL)
   - 取得対象チェーンテーブル全削除
   - 取得対象チェーンCSV読込
-- PlacesAPIリクエスト用CSV出力 (路線TBL ・ 駅TBL → 取得路線情報絞込TBL → PlacesAPIリクエスト用CSV)
+- PlacesAPIリクエスト用CSV出力 (路線TBL ・ 駅TBL → 取得路線情報絞込TBL → 取得路線情報重複削除TBL → PlacesAPIリクエスト用CSV)
   - 取得路線情報絞込テーブルデータ全削除
   - 取得路線情報絞込
+  - 取得路線情報重複削除
   - PlacesAPIリクエスト用CSV出力
 - リクエストデータレポート出力 (取得対象チェーンTBL ・ 取得路線情報絞込TBL → データレポートTXT)
   - リクエストデータレポート出力
