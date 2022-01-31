@@ -14,5 +14,8 @@ tmp/*
 # Work
 work/*
 
+# 駅データJP CSVデータ
+batch/csv/ekidatajp/*
+
 # すべての .gitkeep は Git管理対象内 にする
 !.gitkeep

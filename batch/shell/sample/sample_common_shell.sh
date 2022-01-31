@@ -1,15 +1,15 @@
 #!/bin/bash
 
 # シェルの名前を格納
-EXEC_SHELL_NAME=$(basename $0)
+exec_shell_name=$(basename $0)
 
 ### 共通設定読み込み ###
-# プロジェクトパス情報読み込みファイルの存在チェックと読み込み
-if [ ! -f prjrootpath.sh ]; then
-    echo "ERROR プロジェクトパス情報読み込みファイルが存在しません"
+# プロジェクトルート読み込みファイルの存在チェックと読み込み
+if [ ! -f PROJECT_ROOT.sh ]; then
+    echo "ERROR プロジェクトルート読み込みファイルが存在しません"
     exit 1
 fi
-source prjrootpath.sh
+source PROJECT_ROOT.sh
 
 # 共通設定読み込みファイルの存在チェックと読み込み
 if [ ! -f ${PROJECT_ROOT}/config/common_env.sh ]; then
@@ -27,18 +27,18 @@ fi
 source ${CONFIG_DIR}/${grp_env_file_name}
 
 # 共通モジュール読み込みファイルの存在チェックと読み込み
-if [ ! -f ${CONFIG_DIR}/common_lib.sh ]; then
+if [ ! -f ${COMMON_LIB_SH} ]; then
     echo "ERROR 共通モジュール読み込みファイルが存在しません"
     exit 1
 fi
-source ${CONFIG_DIR}/common_lib.sh
+source ${COMMON_LIB_SH} ${exec_shell_name}
 
 # 認証情報読み込みファイルの存在チェックと読み込み
-if [ ! -f ${ENV_DIR}/.env ]; then
+if [ ! -f ${DOT_ENV} ]; then
     echo "ERROR 認証情報読み込みファイルが存在しません"
     exit 1
 fi
-source ${ENV_DIR}/.env
+source ${DOT_ENV}
 
 ### メイン処理 ###
 log_msg ${INFO} "実行開始"
