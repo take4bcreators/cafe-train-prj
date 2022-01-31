@@ -14,7 +14,7 @@ fi
 
 ##### 引数チェック #####
 # 個数チェック
-if [ $# -ne 3 ]; then
+if [ $# -ne 4 ]; then
     echo "ERROR 引数の数が正しくありません"
     exit 1
 fi
@@ -48,34 +48,29 @@ source ${DOT_ENV}
 ##### メイン処理 #####
 log_msg ${INFO} "実行開始"
 
-# SQLファイル存在チェック
-exec_sql_file_name=$3
-exec_sql_file_path=${SQL_DIR}/${exec_sql_file_name}
-if [ ! -f ${exec_sql_file_path} ]; then
-    log_msg ${ERR} "ERROR 実行SQLファイルが存在しません"
-    log_msg ${ERR} "指定されたファイル名：${exec_sql_file_path}"
+# コピー対象CSV絞り込み
+csv_file_type=$3
+csv_file_type=$(echo ${csv_file_type} | sed 's/YYYYMMDD/\*/')
+copy_target=$(ls -r ${EKIDATAJP_DIR}/${csv_file_type} | head -1)
+if [ -z "${copy_target}" ]; then
+    log_msg ${ERR} "コピー対象ファイルがありません"
+    log_msg ${ERR} "コピー対象ファイル：${copy_target}"
     exit 1
 fi
 
-# SQL実行
-psql -d ${DB_NAME} -U ${DB_USER} -f "${exec_sql_file_path}" ${DB_BIND} > ${STD_OUT_FILE} 2> ${STD_ERR_FILE}
-if [ -s ${STD_OUT_FILE} ]; then
-    log_msg ${INFO} "PSQL標準出力メッセージ...\n""$(cat ${STD_OUT_FILE})"
-else
-    log_msg ${INFO} "PSQL標準出力メッセージ なし"
-fi
-
-# SQLエラーチェック
-if [ -s ${STD_ERR_FILE} ]; then
-    log_msg ${ERR} "PSQLエラー"
-    log_msg ${ERR} "PSQLエラーメッセージ...\n""$(cat ${STD_ERR_FILE})"
-    delete_std_out_file
-    log_msg ${ERR} "異常終了"
+# CSVコピー
+tmp_file_name=$4
+copy_to="${TMP_DIR}/${tmp_file_name}"
+log_msg ${INFO} "CSVファイルコピー"
+log_msg ${INFO} "コピー元ファイル：${copy_target}"
+log_msg ${INFO} "コピー先ファイル：${copy_to}"
+cp ${copy_target} ${copy_to}
+rtn_cd=$?
+if [ ${rtn_cd} -ne 0 ]; then
+    log_msg ${ERR} "CSVファイルコピーでエラーが発生しました"
     exit 1
 fi
 
-# 出力確認用ファイルの削除
-delete_std_out_file
+log_msg ${INFO} "実行完了"
 
-log_msg ${INFO} "正常終了"
 exit 0
