@@ -28,6 +28,12 @@ export DOT_ENV=${ENV_DIR}/.env
 
 
 #########################
+# ファイル名定義
+#########################
+export REQUEST_REPORT_NAME='request_data_report.txt'
+
+
+#########################
 # PostgreSQLの設定
 #########################
 export DB_NAME='cafeindb001'
@@ -54,3 +60,9 @@ export DB_BIND=" \
     -v EKIDATAJP_DIR=${EKIDATAJP_DIR} \
     -v COM_SHELL_DIR=${COM_SHELL_DIR} \
 "
+
+
+#########################
+# Places API 関連
+#########################
+export REQUEST_COST_YEN=4

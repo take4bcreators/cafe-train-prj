@@ -11,6 +11,9 @@ env/*
 # Tmp
 tmp/*
 
+# Data
+data/*
+
 # Work
 work/*
 
