@@ -38,5 +38,19 @@ WHERE
                 WHERE  type_cd = 1
             )
         )
+        OR
+        -- 取得対象路線テーブル から 駅コード 指定のものを取得
+        station_cd IN (
+            SELECT target_cd
+            FROM   :schema.mst_fetch_target_line
+            WHERE  type_cd = 3
+        )
+        OR
+        -- 取得対象路線テーブル から 駅グループコード 指定のものを取得
+        station_g_cd IN (
+            SELECT target_cd
+            FROM   :schema.mst_fetch_target_line
+            WHERE  type_cd = 4
+        )
     )
 ;
