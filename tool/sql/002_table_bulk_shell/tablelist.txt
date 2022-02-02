@@ -6,3 +6,5 @@ mst_fetch_target_chain
 mst_fetch_target_line
 tmp_filtering_fetch_lineinfo
 tmp_unique_fetch_lineinfo
+mst_cafe_chain
+mst_filtering_fetch_cafechain
