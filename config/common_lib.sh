@@ -9,13 +9,14 @@ readonly INFO='INFO'
 readonly DEBUG='DEBUG'
 readonly sep="\t"
 
-# 必須変数存在確認
-if [ -z "${EXEC_SHELL_NAME}" ]; then
-    echo "ERROR 必須の変数が設定されていません"
-    echo "設定されていない変数：EXEC_SHELL_NAME"
+# 引数読み込み
+if [ $# != 1 ]; then
+    echo "ERROR 引数の数が正しくありません"
     exit 1
 fi
+exec_shell_name=$1
 
+# 必須変数存在確認
 if [ -z "${TMP_DIR}" ]; then
     echo "ERROR 必須の変数が設定されていません"
     echo "設定されていない変数：TMP_DIR"
@@ -49,7 +50,7 @@ function log_msg() {
     local logdata="$(date '+%Y-%m-%d %H:%M:%S')"
     local pri=$1
     local pid=$$
-    local shlname=${EXEC_SHELL_NAME}
+    local shlname=${exec_shell_name}
     local logmsg=$2
     
     echo -e "${logdata}${sep}${pri}${sep}pid:${pid}${sep}${shlname}${sep}${logmsg}"
