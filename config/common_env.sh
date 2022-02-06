@@ -66,3 +66,4 @@ export DB_BIND=" \
 # Places API 関連
 #########################
 export REQUEST_COST_YEN=4
+export RADIUS_METER=400
