@@ -7,5 +7,5 @@ CREATE TABLE :schema.str_cafe (
     place_lat TEXT,
     place_lon TEXT,
     updated_at TIMESTAMP,
-    PRIMARY KEY(search_lat, search_lon, updated_at)
+    PRIMARY KEY(search_lat, search_lon, search_name, place_id, updated_at)
 );

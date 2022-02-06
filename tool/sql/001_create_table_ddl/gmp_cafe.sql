@@ -7,5 +7,5 @@ CREATE TABLE :schema.gmp_cafe (
     place_lat TEXT,
     place_lon TEXT,
     updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    PRIMARY KEY(search_lat, search_lon)
+    PRIMARY KEY(search_lat, search_lon, search_name, place_id)
 );
