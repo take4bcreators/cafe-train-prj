@@ -52,6 +52,7 @@ psql
 ```
 
 ```sql
+-- cafeユーザ作成
 -- ロールの確認（作成前）
 \du
 
@@ -69,6 +70,25 @@ ALTER ROLE cafe CREATEROLE CREATEDB LOGIN;
 ```
 
 
+```sql
+-- storageユーザ作成
+-- ロールの確認（作成前）
+\du
+
+-- ユーザ・ロール作成
+CREATE USER storage;
+
+-- 作成後のロール確認
+\du
+
+-- ロールに権限付与
+ALTER ROLE storage CREATEROLE CREATEDB LOGIN;
+
+-- ロール確認（作成後）
+\du
+```
+
+
 ### パスワードの設定
 
 ```sql
@@ -77,6 +97,9 @@ ALTER ROLE postgres WITH PASSWORD '※設定するパスワード';
 
 -- cafe ユーザのパスワードを設定
 ALTER ROLE cafe WITH PASSWORD '※設定するパスワード';
+
+-- storage ユーザのパスワードを設定
+ALTER ROLE storage WITH PASSWORD '※設定するパスワード';
 ```
 
 
@@ -100,27 +123,28 @@ CREATE DATABASE cafeindb001;
 -- グループ作成
 CREATE GROUP cafegrp;
 
--- グループにユーザを追加
-ALTER GROUP cafegrp ADD USER cafe;
-
 -- テーブルへの権限をグループに追加
 GRANT ALL ON DATABASE cafeindb001 TO cafegrp;
+
+-- グループにユーザを追加
+ALTER GROUP cafegrp ADD USER cafe;
+ALTER GROUP cafegrp ADD USER storage;
 
 -- DBを一旦抜ける
 \q
 ```
 
-```bash
-# 作成したDBにログインする
-psql -U cafe -d cafeindb001
-```
-
 
 # スキーマの作成
 
+```bash
+# 作成した postgres ユーザで DB にログインする
+psql -d cafeindb001 -U postgres
+```
+
 ```sql
--- ユーザ名と同じ名前のスキーマを作成する
-CREATE SCHEMA AUTHORIZATION cafe;
+-- スキーマ一覧（作成前）
+\dn
 
 -- prd スキーマの作成
 CREATE SCHEMA prd;
@@ -131,9 +155,87 @@ CREATE SCHEMA dev;
 -- work スキーマの作成
 CREATE SCHEMA work;
 
--- DBを抜ける
+-- スキーマ一覧（作成後）
+\dn
+
+-- ※ もしスキーマの所有者が postgres 以外の場合に実施 ※
+-- スキーマの所有者を変更
+ALTER SCHEMA prd OWNER TO postgres;
+ALTER SCHEMA dev OWNER TO postgres;
+ALTER SCHEMA work OWNER TO postgres;
+
+-- オブジェクトへのアクセス権限を付与する
+GRANT USAGE ON SCHEMA prd TO cafegrp;
+GRANT USAGE ON SCHEMA dev TO cafegrp;
+GRANT USAGE ON SCHEMA work TO cafegrp;
+
+-- CREATE TABLE などのオブジェクト作成権限を与える
+GRANT CREATE ON SCHEMA prd TO cafegrp;
+GRANT CREATE ON SCHEMA dev TO cafegrp;
+GRANT CREATE ON SCHEMA work TO cafegrp;
+
+-- DBを一旦抜ける
 \q
 ```
+
+
+# テーブル権限の付与
+
+```bash
+# 作成した cafe ユーザで DB にログインする
+psql -U cafe -d cafeindb001
+```
+
+```sql
+-- 権限の確認（変更前）
+\z prd.*
+\z dev.*
+\z work.*
+
+-- 現在存在するテーブルに権限を付与する
+-- ここでは TRUNCATE 権限を与えないように、ALL ではなく個別に権限を指定する
+GRANT SELECT, INSERT, UPDATE, DELETE, REFERENCES, TRIGGER ON ALL TABLES IN SCHEMA prd To cafegrp;
+GRANT SELECT, INSERT, UPDATE, DELETE, REFERENCES, TRIGGER ON ALL TABLES IN SCHEMA dev To cafegrp;
+GRANT SELECT, INSERT, UPDATE, DELETE, REFERENCES, TRIGGER ON ALL TABLES IN SCHEMA work To cafegrp;
+
+-- 今後作成される テーブル へのデフォルト権限を設定する （ユーザごとに行う）
+-- ここでは TRUNCATE 権限を与えないように、ALL ではなく個別に権限を指定する
+ALTER DEFAULT PRIVILEGES GRANT SELECT, INSERT, UPDATE, DELETE, REFERENCES, TRIGGER ON TABLES TO cafegrp;
+
+-- 権限の確認（変更後）
+\z prd.*
+\z dev.*
+\z work.*
+
+-- 一旦 PSQL ログアウト
+\q
+```
+
+
+```bash
+# 作成した storage ユーザで DB にログインする
+psql -U storage -d cafeindb001
+```
+
+```sql
+-- 権限の確認（変更前）
+\z prd.*
+\z dev.*
+\z work.*
+
+-- 今後作成される テーブル へのデフォルト権限を設定する （ユーザごとに行う）
+-- ここでは TRUNCATE 権限を与えないように、ALL ではなく個別に権限を指定する
+ALTER DEFAULT PRIVILEGES GRANT SELECT, INSERT, UPDATE, DELETE, REFERENCES, TRIGGER ON TABLES TO cafegrp;
+
+-- 権限の確認（変更後）
+\z prd.*
+\z dev.*
+\z work.*
+
+-- PSQL ログアウト
+\q
+```
+
 
 
 ### アクセスの許可1 (リッスン設定)
@@ -241,6 +343,7 @@ vi .pgpass
 # の形式で追加する
 # （例）
 # localhost:5432:cafeindb001:cafe:※パスワード
+# localhost:5432:cafeindb001:storage:※パスワード
 ##############################
 
 # パーミッション変更
