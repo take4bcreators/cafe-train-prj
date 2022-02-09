@@ -36,6 +36,10 @@ vi /etc/rundeck/rundeck-config.properties
 # grails.serverURL=http://localhost/rundeck
 # ↓ このサーバのアドレスに変える
 # grails.serverURL=http://<ホスト名orIPアドレス>/rundeck
+# ※ 20220207 追記 ※
+# local で動かしているときは localhost で問題なさそう
+# grails.serverURL=http://localhost:4440
+
 
 # Rundeck設定2
 # framework.properties の存在確認
@@ -45,6 +49,8 @@ ls -l /etc/rundeck/framework.properties
 vi /etc/rundeck/framework.properties
 
 # 以下の localhost の部分をこのサーバのアドレスに変える
+# ※ 20220207 追記 ※
+# local で動かしているときは localhost で問題なさそう
 # framework.server.name = localhost
 # framework.server.hostname = localhost
 # framework.server.port = 4440
