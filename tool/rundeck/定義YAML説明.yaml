@@ -1,0 +1,18 @@
+- defaultTab: nodes
+  description: |
+    <日本語詳細>
+  executionEnabled: true
+  group: <階層指定>
+  id: <UUID>
+  loglevel: INFO
+  name: <ジョブ名英語>
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: <実行シェルのフルパス>
+    keepgoing: false
+    strategy: node-first
+  uuid: <UUID>
