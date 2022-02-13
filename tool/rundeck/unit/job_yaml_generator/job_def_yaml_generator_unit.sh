@@ -22,7 +22,7 @@ if [ ! -s ${template_yaml} ]; then
 fi
 
 if [ ! -f ${input_csv} ]; then
-    echo "定義用CSVファイルが存在しません、ファイルサイズが0です"
+    echo "定義用CSVファイルが存在しないか、ファイルサイズが0です"
     echo "ファイル名：${input_csv}"
     exit 1
 fi
