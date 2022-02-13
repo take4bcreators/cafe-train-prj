@@ -5,7 +5,7 @@
   group: batch/main
   id: c7f6533b-ec8b-4964-9b1f-464b08795190
   loglevel: INFO
-  name: input_csv
+  name: import_train
   nodeFilterEditable: false
   plugins:
     ExecutionLifecycle: null

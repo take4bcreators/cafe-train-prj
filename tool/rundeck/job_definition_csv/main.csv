@@ -1,2 +1,3 @@
 MAINUUID,MAINJOBDIR,MAINJOBNAME,MAINJOBDESC
-c7f6533b-ec8b-4964-9b1f-464b08795190,batch/main,input_csv,駅データ読み込み
+c7f6533b-ec8b-4964-9b1f-464b08795190,batch/main,import_train,駅データ読み込み
+f12b309c-1963-4d85-8147-2a1de9bb9fc5,batch/main,create_request,PlaceAPIリクエスト作成

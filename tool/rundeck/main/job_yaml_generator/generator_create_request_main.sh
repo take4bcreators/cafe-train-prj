@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # 機能ごとにファイルを用意して指定する
-input_csv='../../job_definition_csv/import_train_unit.csv'
-output_yaml='../yaml/import_train_main.yaml'
-main_job_name='import_train'
+input_csv='../../job_definition_csv/create_request_unit.csv'
+output_yaml='../yaml/create_request_main.yaml'
+main_job_name='create_request'
 
 # 固定指定
 template_ref_yaml='./job_ref_template.yaml'
