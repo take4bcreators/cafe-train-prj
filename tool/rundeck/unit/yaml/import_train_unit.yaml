@@ -1,0 +1,288 @@
+- defaultTab: nodes
+  description: |
+    対象事業者情報CSVコピー
+  executionEnabled: true
+  group: batch/unit
+  id: f676c1f2-3218-4ead-8005-c8c96482552f
+  loglevel: INFO
+  name: copy_company_csv
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/import_train/copy_company_csv.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: f676c1f2-3218-4ead-8005-c8c96482552f
+- defaultTab: nodes
+  description: |
+    事業者テーブルデータ全削除
+  executionEnabled: true
+  group: batch/unit
+  id: b8230fe3-0957-4fd5-8800-c470d99fb2e1
+  loglevel: INFO
+  name: truncate_ejp_company
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/import_train/truncate_ejp_company.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: b8230fe3-0957-4fd5-8800-c470d99fb2e1
+- defaultTab: nodes
+  description: |
+    事業者テーブル読込
+  executionEnabled: true
+  group: batch/unit
+  id: 13a6c27a-f49c-4359-8a25-6f3889f35847
+  loglevel: INFO
+  name: import_ejp_company
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/import_train/import_ejp_company.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 13a6c27a-f49c-4359-8a25-6f3889f35847
+- defaultTab: nodes
+  description: |
+    事業者情報一時CSV削除
+  executionEnabled: true
+  group: batch/unit
+  id: 5dde8c72-bb26-4911-a879-ab5de0a7ab48
+  loglevel: INFO
+  name: delete_tmp_ejp_company
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/import_train/delete_tmp_ejp_company.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 5dde8c72-bb26-4911-a879-ab5de0a7ab48
+- defaultTab: nodes
+  description: |
+    対象接続駅情報CSVコピー
+  executionEnabled: true
+  group: batch/unit
+  id: 54e387ff-0d07-47ed-9162-fda55e78cbf9
+  loglevel: INFO
+  name: copy_join_csv
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/import_train/copy_join_csv.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 54e387ff-0d07-47ed-9162-fda55e78cbf9
+- defaultTab: nodes
+  description: |
+    接続駅テーブルデータ全削除
+  executionEnabled: true
+  group: batch/unit
+  id: 85c9e273-77f9-45a7-9fc9-28f66baa63d1
+  loglevel: INFO
+  name: truncate_ejp_join
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/import_train/truncate_ejp_join.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 85c9e273-77f9-45a7-9fc9-28f66baa63d1
+- defaultTab: nodes
+  description: |
+    接続駅テーブル読込
+  executionEnabled: true
+  group: batch/unit
+  id: af3c6d9b-59f8-4055-9a90-f1853e3b991e
+  loglevel: INFO
+  name: import_ejp_join
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/import_train/import_ejp_join.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: af3c6d9b-59f8-4055-9a90-f1853e3b991e
+- defaultTab: nodes
+  description: |
+    接続駅情報一時CSV削除
+  executionEnabled: true
+  group: batch/unit
+  id: d8dd6a5c-2837-4986-a837-fc4939ae90a5
+  loglevel: INFO
+  name: delete_tmp_ejp_join
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/import_train/delete_tmp_ejp_join.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: d8dd6a5c-2837-4986-a837-fc4939ae90a5
+- defaultTab: nodes
+  description: |
+    対象路線情報CSVコピー
+  executionEnabled: true
+  group: batch/unit
+  id: 78367215-a5f5-429f-a331-71e2bf54b767
+  loglevel: INFO
+  name: copy_line_csv
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/import_train/copy_line_csv.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 78367215-a5f5-429f-a331-71e2bf54b767
+- defaultTab: nodes
+  description: |
+    路線テーブルデータ全削除
+  executionEnabled: true
+  group: batch/unit
+  id: dfac7e01-a8ed-4b0d-92e3-3b5a112b7676
+  loglevel: INFO
+  name: truncate_ejp_line
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/import_train/truncate_ejp_line.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: dfac7e01-a8ed-4b0d-92e3-3b5a112b7676
+- defaultTab: nodes
+  description: |
+    路線テーブル読込
+  executionEnabled: true
+  group: batch/unit
+  id: a63acb30-9edc-450e-bb92-2162ed9c49da
+  loglevel: INFO
+  name: import_ejp_line
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/import_train/import_ejp_line.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: a63acb30-9edc-450e-bb92-2162ed9c49da
+- defaultTab: nodes
+  description: |
+    路線情報一時CSV削除
+  executionEnabled: true
+  group: batch/unit
+  id: 533bd9d3-c94c-471b-ab30-f209dcf039a4
+  loglevel: INFO
+  name: delete_tmp_ejp_line
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/import_train/delete_tmp_ejp_line.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 533bd9d3-c94c-471b-ab30-f209dcf039a4
+- defaultTab: nodes
+  description: |
+    対象駅情報CSVコピー
+  executionEnabled: true
+  group: batch/unit
+  id: 369bba74-bdbf-4c21-b13b-29e027c6685d
+  loglevel: INFO
+  name: copy_station_csv
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/import_train/copy_station_csv.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 369bba74-bdbf-4c21-b13b-29e027c6685d
+- defaultTab: nodes
+  description: |
+    駅テーブルデータ全削除
+  executionEnabled: true
+  group: batch/unit
+  id: 64ec88d4-9f02-4dff-9a16-09c63d4d69a4
+  loglevel: INFO
+  name: truncate_ejp_station
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/import_train/truncate_ejp_station.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 64ec88d4-9f02-4dff-9a16-09c63d4d69a4
+- defaultTab: nodes
+  description: |
+    駅テーブル読込
+  executionEnabled: true
+  group: batch/unit
+  id: 332a8537-bdff-46c3-ac6c-5edff6e43c7d
+  loglevel: INFO
+  name: import_ejp_station
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/import_train/import_ejp_station.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 332a8537-bdff-46c3-ac6c-5edff6e43c7d
+- defaultTab: nodes
+  description: |
+    駅情報一時CSV削除
+  executionEnabled: true
+  group: batch/unit
+  id: a344039b-e2c9-4417-b615-938329264db8
+  loglevel: INFO
+  name: delete_tmp_ejp_station
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/import_train/delete_tmp_ejp_station.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: a344039b-e2c9-4417-b615-938329264db8

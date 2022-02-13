@@ -1,0 +1,15 @@
+UUID,JOBDIR,JOBNAME,JOBDESC,SHLPATH
+3f6d18e4-5294-4f7e-a604-babdff6b68c4,batch/unit,truncate_mst_fetch_target_line,取得対象路線テーブル全削除,/usr/local/gitrepos/cafe-train-prj/batch/shell/create_request/truncate_mst_fetch_target_line.sh
+5bceba03-1ee2-4bef-b9bd-898f181d9972,batch/unit,import_fetch_target_line,取得対象路線CSV読込,/usr/local/gitrepos/cafe-train-prj/batch/shell/create_request/import_fetch_target_line.sh
+32e8cfd8-fd25-4bc7-bd92-7572e4a8bb3e,batch/unit,truncate_mst_fetch_target_chain,取得対象チェーンテーブル全削除,/usr/local/gitrepos/cafe-train-prj/batch/shell/create_request/truncate_mst_fetch_target_chain.sh
+ef307529-ffe7-4300-9fdb-339fcd2bd9e1,batch/unit,import_fetch_target_chain,取得対象チェーンCSV読込,/usr/local/gitrepos/cafe-train-prj/batch/shell/create_request/import_fetch_target_chain.sh
+23317830-484a-4127-b709-f94f1c348efc,batch/unit,truncate_mst_cafe_chain,カフェチェーンマスタテーブル全削除,/usr/local/gitrepos/cafe-train-prj/batch/shell/create_request/truncate_mst_cafe_chain.sh
+040d014c-4309-4388-a227-605b9d207bbf,batch/unit,import_cafe_chain,カフェチェーンマスタCSV読込,/usr/local/gitrepos/cafe-train-prj/batch/shell/create_request/import_cafe_chain.sh
+acf6fdb9-0790-4e86-8a48-10a010edd9c9,batch/unit,truncate_tmp_filtering_fetch_lineinfo,取得路線情報絞込テーブルデータ全削除,/usr/local/gitrepos/cafe-train-prj/batch/shell/create_request/truncate_tmp_filtering_fetch_lineinfo.sh
+de02e128-8997-4242-966d-92745c10e9ab,batch/unit,filtering_fetch_lineinfo,取得路線情報絞込,/usr/local/gitrepos/cafe-train-prj/batch/shell/create_request/filtering_fetch_lineinfo.sh
+5d8e7a9f-f04d-4e38-b692-6d90245d1989,batch/unit,truncate_tmp_unique_fetch_lineinfo,取得路線情報重複削除テーブルデータ全削除,/usr/local/gitrepos/cafe-train-prj/batch/shell/create_request/truncate_tmp_unique_fetch_lineinfo.sh
+88126c96-b6c6-42b4-96fd-4efc8c3f8f92,batch/unit,unique_fetch_lineinfo,取得路線情報重複削除,/usr/local/gitrepos/cafe-train-prj/batch/shell/create_request/unique_fetch_lineinfo.sh
+e9156727-b4ea-4d2b-9d40-df769b8b805d,batch/unit,export_placesapi_request_data_csv,PlacesAPIリクエスト用CSV出力,/usr/local/gitrepos/cafe-train-prj/batch/shell/create_request/export_placesapi_request_data_csv.sh
+0b965078-b907-4113-a499-8270c40a21dc,batch/unit,truncate_mst_filtering_fetch_cafechain,取得対象チェーン絞込テーブルデータ全削除,/usr/local/gitrepos/cafe-train-prj/batch/shell/create_request/truncate_mst_filtering_fetch_cafechain.sh
+566a3c13-39a9-442e-9f9a-e2d3c869401c,batch/unit,filtering_fetch_cafechain,取得対象チェーン絞込,/usr/local/gitrepos/cafe-train-prj/batch/shell/create_request/filtering_fetch_cafechain.sh
+5b2b92e2-871d-4aa0-9fcf-771136593587,batch/unit,export_request_data_report_txt,リクエストデータレポート出力,/usr/local/gitrepos/cafe-train-prj/batch/shell/create_request/export_request_data_report_txt.sh
