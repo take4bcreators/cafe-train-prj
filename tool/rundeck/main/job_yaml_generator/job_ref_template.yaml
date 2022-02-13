@@ -1,0 +1,5 @@
+    - jobref:
+        group: <JOBDIR>
+        name: <JOBNAME>
+        nodeStep: 'true'
+        uuid: <UUID>
