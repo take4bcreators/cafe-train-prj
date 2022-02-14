@@ -1,12 +1,12 @@
 -- 定義路線情報併合テーブルへの挿入
 INSERT INTO :schema.tmp_merge_defined_lineinfo (
-    line_cd,
-    join_line_cd,
+    new_line_cd,
+    origin_line_cd,
     company_cd,
-    line_name,
+    new_line_name,
+    origin_line_name,
     line_name_k,
     line_name_h,
-    def_line_name,
     line_symbol,
     line_color_c,
     line_color_t,
@@ -18,13 +18,13 @@ INSERT INTO :schema.tmp_merge_defined_lineinfo (
     e_sort
 )
 SELECT
-    T1.line_cd,
-    T2.join_line_cd,
+    COALESCE(T2.def_line_cd, T1.line_cd) AS new_line_cd,
+    T1.line_cd AS origin_line_cd,
     T1.company_cd,
-    T1.line_name,
+    COALESCE(T2.def_line_name, T1.line_name) AS new_line_name,
+    T1.line_name AS origin_line_name,
     T1.line_name_k,
     T1.line_name_h,
-    T2.def_line_name,
     T2.line_symbol,
     T1.line_color_c,
     T1.line_color_t,

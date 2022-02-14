@@ -1,11 +1,11 @@
 CREATE TABLE :schema.tmp_merge_line_url (
-    line_cd INTEGER,
-    join_line_cd INTEGER,
+    new_line_cd INTEGER,
+    origin_line_cd INTEGER NOT NULL,
     company_cd INTEGER NOT NULL,
-    line_name TEXT NOT NULL,
+    new_line_name TEXT NOT NULL,
+    origin_line_name TEXT NOT NULL,
     line_name_k TEXT,
     line_name_h TEXT,
-    def_line_name TEXT,
     line_symbol TEXT,
     line_color_cd TEXT,
     line_color_c TEXT,
@@ -17,5 +17,5 @@ CREATE TABLE :schema.tmp_merge_line_url (
     zoom INTEGER,
     e_status INTEGER,
     e_sort INTEGER,
-    PRIMARY KEY(line_cd)
+    PRIMARY KEY(new_line_cd)
 );
