@@ -1,0 +1,738 @@
+- defaultTab: nodes
+  description: |
+    定義事業者情報テーブルデータ全削除
+  executionEnabled: true
+  group: batch/unit
+  id: 963121e4-1ec7-4bb3-b82c-26fe0283271e
+  loglevel: INFO
+  name: truncate_mst_defined_companyinfo
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/truncate_mst_defined_companyinfo.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 963121e4-1ec7-4bb3-b82c-26fe0283271e
+- defaultTab: nodes
+  description: |
+    定義事業者情報テーブル読込
+  executionEnabled: true
+  group: batch/unit
+  id: b6c72de9-192f-4657-983b-d4fc5efdf920
+  loglevel: INFO
+  name: import_mst_defined_companyinfo
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/import_mst_defined_companyinfo.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: b6c72de9-192f-4657-983b-d4fc5efdf920
+- defaultTab: nodes
+  description: |
+    定義事業者情報併合テーブルデータ全削除
+  executionEnabled: true
+  group: batch/unit
+  id: 73c713b6-a2d7-494e-a293-1b32898e7f5b
+  loglevel: INFO
+  name: truncate_merge_defined_companyinfo
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/truncate_merge_defined_companyinfo.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 73c713b6-a2d7-494e-a293-1b32898e7f5b
+- defaultTab: nodes
+  description: |
+    定義事業者情報併合
+  executionEnabled: true
+  group: batch/unit
+  id: 0eb87b66-248d-4262-b44d-dd731576de22
+  loglevel: INFO
+  name: merge_defined_companyinfo
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/merge_defined_companyinfo.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 0eb87b66-248d-4262-b44d-dd731576de22
+- defaultTab: nodes
+  description: |
+    事業者URL情報テーブルデータ全削除
+  executionEnabled: true
+  group: batch/unit
+  id: 863c5257-21e5-4e38-9a95-59ca9303d019
+  loglevel: INFO
+  name: truncate_mst_company_url
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/truncate_mst_company_url.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 863c5257-21e5-4e38-9a95-59ca9303d019
+- defaultTab: nodes
+  description: |
+    事業者URL情報テーブル読込
+  executionEnabled: true
+  group: batch/unit
+  id: 2099ee51-0e46-4772-b060-731cd417cf2a
+  loglevel: INFO
+  name: import_mst_company_url
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/import_mst_company_url.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 2099ee51-0e46-4772-b060-731cd417cf2a
+- defaultTab: nodes
+  description: |
+    事業者URL情報併合テーブルデータ全削除
+  executionEnabled: true
+  group: batch/unit
+  id: 4fd49bca-4efc-4153-8a85-6601478a2cef
+  loglevel: INFO
+  name: truncate_merge_company_url
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/truncate_merge_company_url.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 4fd49bca-4efc-4153-8a85-6601478a2cef
+- defaultTab: nodes
+  description: |
+    事業者URL情報併合
+  executionEnabled: true
+  group: batch/unit
+  id: 97335014-0194-40f4-9dae-b1f501eb1ee3
+  loglevel: INFO
+  name: merge_company_url
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/merge_company_url.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 97335014-0194-40f4-9dae-b1f501eb1ee3
+- defaultTab: nodes
+  description: |
+    定義路線情報テーブルデータ全削除
+  executionEnabled: true
+  group: batch/unit
+  id: 6fc358a6-c9c8-4db4-b7b0-91d0b1aec953
+  loglevel: INFO
+  name: truncate_mst_defined_lineinfo
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/truncate_mst_defined_lineinfo.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 6fc358a6-c9c8-4db4-b7b0-91d0b1aec953
+- defaultTab: nodes
+  description: |
+    定義路線情報テーブル読込
+  executionEnabled: true
+  group: batch/unit
+  id: 7d310211-1b0a-466d-8865-c2453c843e0a
+  loglevel: INFO
+  name: import_mst_defined_lineinfo
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/import_mst_defined_lineinfo.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 7d310211-1b0a-466d-8865-c2453c843e0a
+- defaultTab: nodes
+  description: |
+    定義路線情報併合テーブルデータ全削除
+  executionEnabled: true
+  group: batch/unit
+  id: b26b7f9b-04e3-4f4b-9ad4-af20825417c0
+  loglevel: INFO
+  name: truncate_merge_defined_lineinfo
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/truncate_merge_defined_lineinfo.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: b26b7f9b-04e3-4f4b-9ad4-af20825417c0
+- defaultTab: nodes
+  description: |
+    定義路線情報併合
+  executionEnabled: true
+  group: batch/unit
+  id: 34f0985a-0006-4f43-92ec-77cca3b715c3
+  loglevel: INFO
+  name: merge_defined_lineinfo
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/merge_defined_lineinfo.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 34f0985a-0006-4f43-92ec-77cca3b715c3
+- defaultTab: nodes
+  description: |
+    ラインカラーテーブルデータ全削除
+  executionEnabled: true
+  group: batch/unit
+  id: 13641929-d21a-45c1-9b89-53e126aaf464
+  loglevel: INFO
+  name: truncate_mst_linecolor
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/truncate_mst_linecolor.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 13641929-d21a-45c1-9b89-53e126aaf464
+- defaultTab: nodes
+  description: |
+    ラインカラーテーブル読込
+  executionEnabled: true
+  group: batch/unit
+  id: f36b3dfb-fa22-4f01-be44-26d76b8ea65e
+  loglevel: INFO
+  name: import_mst_linecolor
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/import_mst_linecolor.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: f36b3dfb-fa22-4f01-be44-26d76b8ea65e
+- defaultTab: nodes
+  description: |
+    ラインカラー情報併合テーブルデータ全削除
+  executionEnabled: true
+  group: batch/unit
+  id: b603c760-5a45-4687-bf22-69daf58d9b45
+  loglevel: INFO
+  name: truncate_merge_linecolor_info
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/truncate_merge_linecolor_info.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: b603c760-5a45-4687-bf22-69daf58d9b45
+- defaultTab: nodes
+  description: |
+    ラインカラー情報併合
+  executionEnabled: true
+  group: batch/unit
+  id: 0aa96912-5c23-4e5d-99ea-e16fab53a0ac
+  loglevel: INFO
+  name: merge_linecolor_info
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/merge_linecolor_info.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 0aa96912-5c23-4e5d-99ea-e16fab53a0ac
+- defaultTab: nodes
+  description: |
+    路線URL情報テーブルデータ全削除
+  executionEnabled: true
+  group: batch/unit
+  id: 29cd9588-c87a-40ee-8c5a-df0456fe6edf
+  loglevel: INFO
+  name: truncate_mst_line_url
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/truncate_mst_line_url.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 29cd9588-c87a-40ee-8c5a-df0456fe6edf
+- defaultTab: nodes
+  description: |
+    路線URL情報テーブル読込
+  executionEnabled: true
+  group: batch/unit
+  id: b2b89d51-3d57-4d7a-9026-e46b71f74aa7
+  loglevel: INFO
+  name: import_mst_line_url
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/import_mst_line_url.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: b2b89d51-3d57-4d7a-9026-e46b71f74aa7
+- defaultTab: nodes
+  description: |
+    路線URL情報併合テーブルデータ全削除
+  executionEnabled: true
+  group: batch/unit
+  id: 4ba4b26e-259d-428e-9d6e-b92c1f969587
+  loglevel: INFO
+  name: truncate_merge_line_url
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/truncate_merge_line_url.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 4ba4b26e-259d-428e-9d6e-b92c1f969587
+- defaultTab: nodes
+  description: |
+    路線URL情報併合
+  executionEnabled: true
+  group: batch/unit
+  id: 3a043274-69ee-4ede-891a-6ae3da3d499c
+  loglevel: INFO
+  name: merge_line_url
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/merge_line_url.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 3a043274-69ee-4ede-891a-6ae3da3d499c
+- defaultTab: nodes
+  description: |
+    ページ作成路線テーブルデータ全削除
+  executionEnabled: true
+  group: batch/unit
+  id: 235d1ee3-257b-48f7-b217-351d7656d1d5
+  loglevel: INFO
+  name: truncate_mst_page_create_line
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/truncate_mst_page_create_line.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 235d1ee3-257b-48f7-b217-351d7656d1d5
+- defaultTab: nodes
+  description: |
+    ページ作成路線テーブル読込
+  executionEnabled: true
+  group: batch/unit
+  id: fe1d90cd-8973-4ad2-9fe3-a82e59767b94
+  loglevel: INFO
+  name: import_mst_page_create_line
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/import_mst_page_create_line.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: fe1d90cd-8973-4ad2-9fe3-a82e59767b94
+- defaultTab: nodes
+  description: |
+    ページ作成路線情報併合テーブルデータ全削除
+  executionEnabled: true
+  group: batch/unit
+  id: 87a6301f-d660-42f0-883f-7567006e46fe
+  loglevel: INFO
+  name: truncate_merge_page_create_line
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/truncate_merge_page_create_line.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 87a6301f-d660-42f0-883f-7567006e46fe
+- defaultTab: nodes
+  description: |
+    ページ作成路線情報併合
+  executionEnabled: true
+  group: batch/unit
+  id: 344740d2-89a0-48bc-bcaa-02f7403646e4
+  loglevel: INFO
+  name: merge_page_create_line
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/merge_page_create_line.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 344740d2-89a0-48bc-bcaa-02f7403646e4
+- defaultTab: nodes
+  description: |
+    定義駅情報テーブルデータ全削除
+  executionEnabled: true
+  group: batch/unit
+  id: 344849ac-e5ed-4d11-9d78-8ac8b9377fd8
+  loglevel: INFO
+  name: truncate_mst_defined_stationinfo
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/truncate_mst_defined_stationinfo.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 344849ac-e5ed-4d11-9d78-8ac8b9377fd8
+- defaultTab: nodes
+  description: |
+    定義駅情報テーブル読込
+  executionEnabled: true
+  group: batch/unit
+  id: e6a3eff1-c4fe-4118-8c6f-3ef844b8966f
+  loglevel: INFO
+  name: import_mst_defined_stationinfo
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/import_mst_defined_stationinfo.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: e6a3eff1-c4fe-4118-8c6f-3ef844b8966f
+- defaultTab: nodes
+  description: |
+    定義駅情報併合テーブルデータ全削除
+  executionEnabled: true
+  group: batch/unit
+  id: a53d0f5b-c0ce-4533-b92a-f5a505d621e1
+  loglevel: INFO
+  name: truncate_merge_defined_stationinfo
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/truncate_merge_defined_stationinfo.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: a53d0f5b-c0ce-4533-b92a-f5a505d621e1
+- defaultTab: nodes
+  description: |
+    定義駅情報併合
+  executionEnabled: true
+  group: batch/unit
+  id: 3cc83fe6-19d2-4336-bd4d-5bfe08c20256
+  loglevel: INFO
+  name: merge_defined_stationinfo
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/merge_defined_stationinfo.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 3cc83fe6-19d2-4336-bd4d-5bfe08c20256
+- defaultTab: nodes
+  description: |
+    駅カフェ情報最新データ抽出テーブルデータ全削除
+  executionEnabled: true
+  group: batch/unit
+  id: cd256b11-df6c-4ca5-9c60-45e78924ddff
+  loglevel: INFO
+  name: truncate_tmp_filtering_newest_cafeinfo
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/truncate_tmp_filtering_newest_cafeinfo.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: cd256b11-df6c-4ca5-9c60-45e78924ddff
+- defaultTab: nodes
+  description: |
+    駅カフェ情報最新データ抽出
+  executionEnabled: true
+  group: batch/unit
+  id: 9296263d-1aa8-44b2-b853-0a0bc4fa8f35
+  loglevel: INFO
+  name: filtering_newest_cafeinfo
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/filtering_newest_cafeinfo.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 9296263d-1aa8-44b2-b853-0a0bc4fa8f35
+- defaultTab: nodes
+  description: |
+    駅情報併合テーブルデータ全削除
+  executionEnabled: true
+  group: batch/unit
+  id: a7a34ee9-cca1-4592-a40c-e70accd676de
+  loglevel: INFO
+  name: truncate_tmp_merge_stationinfo
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/truncate_tmp_merge_stationinfo.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: a7a34ee9-cca1-4592-a40c-e70accd676de
+- defaultTab: nodes
+  description: |
+    駅情報併合
+  executionEnabled: true
+  group: batch/unit
+  id: dacf5377-9336-4a0f-beb2-2bd519c68430
+  loglevel: INFO
+  name: merge_stationinfo
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/merge_stationinfo.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: dacf5377-9336-4a0f-beb2-2bd519c68430
+- defaultTab: nodes
+  description: |
+    接続駅情報併合テーブルデータ全削除
+  executionEnabled: true
+  group: batch/unit
+  id: fd701daf-8b20-4510-a23b-70ab6bdc4aab
+  loglevel: INFO
+  name: truncate_tmp_merge_joininfo
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/truncate_tmp_merge_joininfo.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: fd701daf-8b20-4510-a23b-70ab6bdc4aab
+- defaultTab: nodes
+  description: |
+    接続駅情報併合
+  executionEnabled: true
+  group: batch/unit
+  id: 12efbd77-7a74-4644-b89e-98b9817a7195
+  loglevel: INFO
+  name: merge_joininfo
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/merge_joininfo.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 12efbd77-7a74-4644-b89e-98b9817a7195
+- defaultTab: nodes
+  description: |
+    路線情報併合テーブルデータ全削除
+  executionEnabled: true
+  group: batch/unit
+  id: 0001e490-cbbb-4261-9641-4ba918acfb5e
+  loglevel: INFO
+  name: truncate_tmp_merge_lineinfo
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/truncate_tmp_merge_lineinfo.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 0001e490-cbbb-4261-9641-4ba918acfb5e
+- defaultTab: nodes
+  description: |
+    路線情報併合
+  executionEnabled: true
+  group: batch/unit
+  id: 7da70ddb-c542-448c-9bbc-2616da772df8
+  loglevel: INFO
+  name: merge_lineinfo
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/merge_lineinfo.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 7da70ddb-c542-448c-9bbc-2616da772df8
+- defaultTab: nodes
+  description: |
+    事業者情報併合テーブルデータ全削除
+  executionEnabled: true
+  group: batch/unit
+  id: 96490762-bd1c-43e6-ad2c-fd41b5d60c80
+  loglevel: INFO
+  name: truncate_tmp_merge_companyinfo
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/truncate_tmp_merge_companyinfo.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 96490762-bd1c-43e6-ad2c-fd41b5d60c80
+- defaultTab: nodes
+  description: |
+    事業者情報併合
+  executionEnabled: true
+  group: batch/unit
+  id: 71e3ed11-fb6f-45ea-a5e2-e68d8f8066a9
+  loglevel: INFO
+  name: merge_companyinfo
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/merge_companyinfo.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 71e3ed11-fb6f-45ea-a5e2-e68d8f8066a9
+- defaultTab: nodes
+  description: |
+    ページコンテンツテーブルデータ全削除
+  executionEnabled: true
+  group: batch/unit
+  id: dcb084eb-3c46-48df-9979-c9be38b5f08b
+  loglevel: INFO
+  name: truncate_page_contents
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/truncate_page_contents.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: dcb084eb-3c46-48df-9979-c9be38b5f08b
+- defaultTab: nodes
+  description: |
+    ページコンテンツテーブル挿入
+  executionEnabled: true
+  group: batch/unit
+  id: cd29ae7b-95d8-4c11-9f5d-90573ab4d06b
+  loglevel: INFO
+  name: insert_page_contents
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/insert_page_contents.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: cd29ae7b-95d8-4c11-9f5d-90573ab4d06b
+- defaultTab: nodes
+  description: |
+    ページコンテンツCSV出力
+  executionEnabled: true
+  group: batch/unit
+  id: b3078f59-9eec-4fac-9570-0e484436644e
+  loglevel: INFO
+  name: export_page_contents_csv
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/export_page_contents_csv.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: b3078f59-9eec-4fac-9570-0e484436644e
