@@ -1,0 +1,22 @@
+- defaultTab: nodes
+  description: |
+    PlaceAPIリクエスト実行
+  executionEnabled: true
+  group: batch/main
+  id: ebca8262-d06c-4125-9241-6ace480fbb3b
+  loglevel: INFO
+  name: execution_placesapi
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands: 
+    - jobref:
+        group: batch/unit
+        name: fetch_gcp_cafe
+        nodeStep: 'true'
+        uuid: 2dd601e3-c9e2-44fc-9f02-292b7a08dff5
+    keepgoing: false
+    strategy: node-first
+  uuid: ebca8262-d06c-4125-9241-6ace480fbb3b
