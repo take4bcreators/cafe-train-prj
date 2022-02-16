@@ -1,5 +1,5 @@
 -- 処理対象指定
-\set from_csv_path  :DATA_DIR'/get_gmp_data.tsv'
+\set from_csv_path  :GRP_GMP_TSV
 \set to_table_name  'gmp_cafe'
 \set column_list    'search_lat,search_lon,search_name,place_id,place_name,place_lat,place_lon'
 

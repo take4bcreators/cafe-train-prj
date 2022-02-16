@@ -5,40 +5,34 @@
 # ディレクトリのパスの最後に / は入れない
 #########################
 # 第1階層ディレクトリ
-export BATCH_DIR=${PROJECT_ROOT}/batch
-export CONFIG_DIR=${PROJECT_ROOT}/config
-export DATA_DIR=${PROJECT_ROOT}/data
-export ENV_DIR=${PROJECT_ROOT}/env
-export LOG_DIR=${PROJECT_ROOT}/log
-export SSG_DIR=${PROJECT_ROOT}/ssg
-export TMP_DIR=${PROJECT_ROOT}/tmp
+export BATCH_DIR="${PROJECT_ROOT}/batch"
+export CONFIG_DIR="${PROJECT_ROOT}/config"
+export DATA_DIR="${PROJECT_ROOT}/data"
+export ENV_DIR="${PROJECT_ROOT}/env"
+export LOG_DIR="${PROJECT_ROOT}/log"
+export SSG_DIR="${PROJECT_ROOT}/ssg"
+export TMP_DIR="${PROJECT_ROOT}/tmp"
 
 # 第2階層ディレクトリ
-export CSV_DIR=${BATCH_DIR}/csv
-export SHELL_DIR=${BATCH_DIR}/shell
-export SQL_DIR=${BATCH_DIR}/sql
+export CSV_DIR="${BATCH_DIR}/csv"
+export SHELL_DIR="${BATCH_DIR}/shell"
+export SQL_DIR="${BATCH_DIR}/sql"
 
 # 第3階層ディレクトリ
-export EKIDATAJP_DIR=${CSV_DIR}/ekidatajp
-export COM_SHELL_DIR=${SHELL_DIR}/common
+export EKIDATAJP_DIR="${CSV_DIR}/ekidatajp"
+export COM_SHELL_DIR="${SHELL_DIR}/common"
 
 # ファイルパス
-export COMMON_LIB_SH=${CONFIG_DIR}/common_lib.sh
-export DOT_ENV=${ENV_DIR}/.env
-
-
-#########################
-# ファイル名定義
-#########################
-export REQUEST_REPORT_NAME='request_data_report.txt'
+export COMMON_LIB_SH="${CONFIG_DIR}/common_lib.sh"
+export DOT_ENV="${ENV_DIR}/.env"
 
 
 #########################
 # PostgreSQLの設定
 #########################
-export DB_NAME='cafeindb001'
-export DB_USER='cafe'
-export DB_SCHEMA='dev'
+export DB_NAME="cafeindb001"
+export DB_USER="cafe"
+export DB_SCHEMA="dev"
 
 
 #########################
@@ -60,10 +54,3 @@ export DB_BIND=" \
     -v EKIDATAJP_DIR=${EKIDATAJP_DIR} \
     -v COM_SHELL_DIR=${COM_SHELL_DIR} \
 "
-
-
-#########################
-# Places API 関連
-#########################
-export REQUEST_COST_YEN=4
-export RADIUS_METER=400
