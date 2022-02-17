@@ -1,4 +1,4 @@
--- 検索チェック付与テーブルへ挿入
+-- 検索チェック付与 テーブルへ挿入
 INSERT INTO :schema.tmp_add_search_check (
     search_lat,
     search_lon,
@@ -11,21 +11,17 @@ INSERT INTO :schema.tmp_add_search_check (
 SELECT
     T1.search_lat,
     T1.search_lon,
-    STRING_AGG(DISTINCT T2.station_name, '、') AS target_station_name,
+    T1.target_station_name,
     T1.search_name,
     T1.place_id,
     T1.place_name,
     CASE
-        WHEN T1.place_name LIKE '%' || T1.search_name || '%' THEN 1
+        WHEN T1.place_name ~ COALESCE(T2.res_judge_regexp, T1.search_name) THEN 1
         ELSE 0 END AS search_check_flag
 FROM
-    :schema.gmp_cafe T1
-INNER JOIN
-    :schema.ejp_station T2
+    :schema.tmp_add_station_name T1
+LEFT OUTER JOIN
+    :schema.mst_cafe_chain T2
 ON
-    T1.search_lat       = T2.lat
-    AND T1.search_lon   = T2.lon
-GROUP BY
-    T1.search_lat, T1.search_lon, T1.search_name, T1.place_id, T1.place_name
+    T1.search_name = T2.api_search_word
 ;
-
