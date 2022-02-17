@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # 実行シェルの名前を指定
-exec_shell_name='delete_tmp_file.sh'
+exec_shell_name='execute_sql.sh'
 # 機能別設定ファイル名を指定
-grp_env_file_name='grp_env_execution_placesapi.sh'
-# 削除tmpファイル名を指定
-delete_file_name='tmp_gmp_cafe.tsv'
+grp_env_file_name='grp_env_create_ekicafe.sh'
+# 実行SQLファイル名を指定
+exec_sql_file_name='truncate_gmp_cafe.sql'
 
 
 # シェルの名前を格納
@@ -29,7 +29,7 @@ source ${PROJECT_ROOT}/config/common_env.sh
 exec_shell=${COM_SHELL_DIR}/${exec_shell_name}
 
 # シェル実行
-#  delete_tmp_file.sh 機能別設定ファイル名 このシェルのファイル名 削除tmpファイル名
-${exec_shell} ${grp_env_file_name} ${this_shell_name} ${delete_file_name}
+#  execute_sql.sh 機能別設定ファイル名 このシェルのファイル名 実行SQLファイル名
+${exec_shell} ${grp_env_file_name} ${this_shell_name} ${exec_sql_file_name}
 
 exit $?

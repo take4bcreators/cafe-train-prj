@@ -3,9 +3,9 @@
 # 実行シェルの名前を指定
 exec_shell_name='execute_sql.sh'
 # 機能別設定ファイル名を指定
-grp_env_file_name='grp_env_execution_placesapi.sh'
+grp_env_file_name='grp_env_create_ekicafe.sh'
 # 実行SQLファイル名を指定
-exec_sql_file_name='add_search_check.sql'
+exec_sql_file_name='truncate_create_stationcafe_info.sql'
 
 
 # シェルの名前を格納

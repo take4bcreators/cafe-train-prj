@@ -1,0 +1,2 @@
+UUID,JOBDIR,JOBNAME,JOBDESC,SHLPATH
+2dd601e3-c9e2-44fc-9f02-292b7a08dff5,batch/unit,fetch_gcp_cafe,カフェ情報取得,/usr/local/gitrepos/cafe-train-prj/batch/shell/execution_placesapi/fetch_gcp_cafe.sh
