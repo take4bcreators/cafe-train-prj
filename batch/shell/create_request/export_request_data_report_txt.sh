@@ -53,7 +53,7 @@ lat_lon_count=$(psql -tAq -d ${DB_NAME} -U ${DB_USER} -c "${lat_lon_count_sql}")
 chain_count_sql="SELECT COUNT(*) FROM ${DB_SCHEMA}.mst_fetch_target_chain;"
 chain_count=$(psql -tAq -d ${DB_NAME} -U ${DB_USER} -c "${chain_count_sql}")
 
-
+# セパレータを指定
 sep_char="、"
 
 # 取得対象のチェーン名称を取得
@@ -111,14 +111,14 @@ now_date=$(date "+%Y年%m月%d日 %H:%M:%S")
 
 # 算出
 request_count_sum=$(( ${lat_lon_count} * ${chain_count} ))
-request_cost_sum=$(( ${request_count_sum} * ${REQUEST_COST_YEN} ))
+request_cost_sum=$(( ${request_count_sum} * ${GRP_REQUEST_COST_YEN} ))
 
 # レポート作成
-# cat << EOF > ${DATA_DIR}/${REQUEST_REPORT_NAME}
+# cat << EOF > ${GRP_REQUEST_REPORT}
 # 【リクエストレポート】
 #     ■ 対象緯度経度数        ：   $(printf '%8s\n' ${lat_lon_count})
 #     ■ 対象チェーン数        ：   $(printf '%8s\n' ${chain_count})
-#     ■ 設定リクエスト単価    ： ¥ $(printf '%8s\n' ${REQUEST_COST_YEN})
+#     ■ 設定リクエスト単価    ： ¥ $(printf '%8s\n' ${GRP_REQUEST_COST_YEN})
 #     ■ 合計リクエスト数      ：   $(printf '%8s\n' ${request_count_sum})
 #     ■ 予想コスト            ： ¥ $(printf '%8s\n' ${request_cost_sum})
 
@@ -128,12 +128,12 @@ request_cost_sum=$(( ${request_count_sum} * ${REQUEST_COST_YEN} ))
 # ${now_date} 出力
 # EOF
 
-
+# レポート作成
 report_text="
 【リクエストレポート】
     ■ 対象緯度経度数        ：   $(printf '%8s\n' ${lat_lon_count})
     ■ 対象チェーン数        ：   $(printf '%8s\n' ${chain_count})
-    ■ 設定リクエスト単価    ： ¥ $(printf '%8s\n' ${REQUEST_COST_YEN})
+    ■ 設定リクエスト単価    ： ¥ $(printf '%8s\n' ${GRP_REQUEST_COST_YEN})
     ■ 合計リクエスト数      ：   $(printf '%8s\n' ${request_count_sum})
     ■ 予想コスト            ： ¥ $(printf '%8s\n' ${request_cost_sum})
 
@@ -152,9 +152,8 @@ report_text="
 ${now_date} 出力
 "
 
-echo -e "${report_text}" > ${DATA_DIR}/${REQUEST_REPORT_NAME}
-
+# レポート出力
+echo -e "${report_text}" > ${GRP_REQUEST_REPORT}
 
 log_msg ${INFO} "実行完了"
-
 exit 0
