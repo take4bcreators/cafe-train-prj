@@ -1,13 +1,13 @@
--- 取得対象チェーン絞込テーブルへの挿入
+-- 取得対象チェーン絞込 テーブルへの挿入
 INSERT INTO :schema.mst_filtering_fetch_cafechain (
-    chain_id,       -- チェーン識別番号
-    chain_name,     -- チェーン名称
-    search_name     -- 検索用名称
+    chain_id,           -- チェーン識別番号
+    chain_name,         -- チェーン名称
+    api_search_word     -- 検索用名称
 )
 SELECT
-    chain_id,       -- チェーン識別番号
-    chain_name,     -- チェーン名称
-    search_name     -- 検索用名称
+    chain_id,           -- チェーン識別番号
+    chain_name,         -- チェーン名称
+    api_search_word     -- 検索用名称
 FROM
     :schema.mst_cafe_chain  -- カフェチェーンマスタテーブル 
 WHERE
