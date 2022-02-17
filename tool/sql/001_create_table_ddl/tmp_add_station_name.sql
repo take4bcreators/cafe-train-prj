@@ -5,5 +5,7 @@ CREATE TABLE :schema.tmp_add_station_name (
     search_name TEXT,
     place_id TEXT,
     place_name TEXT,
+    place_lat TEXT,
+    place_lon TEXT,
     PRIMARY KEY(search_lat, search_lon, search_name, place_id)
 );

@@ -5,7 +5,9 @@ INSERT INTO :schema.tmp_add_station_name (
     target_station_name,
     search_name,
     place_id,
-    place_name
+    place_name,
+    place_lat,
+    place_lon
 )
 SELECT
     T1.search_lat,
@@ -13,7 +15,9 @@ SELECT
     STRING_AGG(DISTINCT T2.station_name, '、') AS target_station_name,
     T1.search_name,
     T1.place_id,
-    T1.place_name
+    T1.place_name,
+    T1.place_lat,
+    T1.place_lon
 FROM
     :schema.gmp_cafe T1
 INNER JOIN

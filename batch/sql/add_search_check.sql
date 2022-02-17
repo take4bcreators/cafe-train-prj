@@ -6,6 +6,8 @@ INSERT INTO :schema.tmp_add_search_check (
     search_name,
     place_id,
     place_name,
+    place_lat,
+    place_lon,
     search_check_flag
 )
 SELECT
@@ -15,6 +17,8 @@ SELECT
     T1.search_name,
     T1.place_id,
     T1.place_name,
+    T1.place_lat,
+    T1.place_lon,
     CASE
         WHEN T1.place_name ~ COALESCE(T2.res_judge_regexp, T1.search_name) THEN 1
         ELSE 0 END AS search_check_flag
