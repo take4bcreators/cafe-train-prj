@@ -1,2 +1,16 @@
 UUID,JOBDIR,JOBNAME,JOBDESC,SHLPATH
-
+32f59d98-2ff1-4b46-bf99-32425317412e,batch/unit/create_ekicafe,truncate_gmp_cafe,カフェ情報テーブルデータ全削除,/usr/local/gitrepos/cafe-train-prj/batch/shell/create_ekicafe/truncate_gmp_cafe.sh
+04485f4f-2507-41d2-a839-20d6c13e0604,batch/unit/create_ekicafe,import_gmp_cafe,カフェ情報読込,/usr/local/gitrepos/cafe-train-prj/batch/shell/create_ekicafe/import_gmp_cafe.sh
+b5e357ac-115c-4d62-87a7-d5b7d9d130b5,batch/unit/create_ekicafe,insert_str_cafe,カフェ情報蓄積テーブル挿入,/usr/local/gitrepos/cafe-train-prj/batch/shell/create_ekicafe/insert_str_cafe.sh
+0d0484af-538b-4756-8b7a-61fd3823c64b,batch/unit/create_ekicafe,truncate_add_station_name,駅名情報付与テーブルデータ全削除,/usr/local/gitrepos/cafe-train-prj/batch/shell/create_ekicafe/truncate_add_station_name.sh
+8091a7c5-0494-4136-b85b-a96f9489d1a8,batch/unit/create_ekicafe,add_station_name,駅名情報付与,/usr/local/gitrepos/cafe-train-prj/batch/shell/create_ekicafe/add_station_name.sh
+f75f6cac-5daa-4fa1-9cec-d2f039d5fce5,batch/unit/create_ekicafe,truncate_add_search_check,検索チェック付与テーブルデータ全削除,/usr/local/gitrepos/cafe-train-prj/batch/shell/create_ekicafe/truncate_add_search_check.sh
+ead3be3f-545a-44da-a707-6413064c51f1,batch/unit/create_ekicafe,add_search_check,検索チェック付与,/usr/local/gitrepos/cafe-train-prj/batch/shell/create_ekicafe/add_search_check.sh
+2d55795f-0684-4059-bd7c-fda82bc45fc8,batch/unit/create_ekicafe,truncate_add_distance_check,距離チェック付与テーブルデータ全削除,/usr/local/gitrepos/cafe-train-prj/batch/shell/create_ekicafe/truncate_add_distance_check.sh
+7148f954-953c-4059-9012-18756e3672a5,batch/unit/create_ekicafe,add_distance_check,距離チェック付与,/usr/local/gitrepos/cafe-train-prj/batch/shell/create_ekicafe/add_distance_check.sh
+3d071380-4694-49f3-bf0d-433d07b20faa,batch/unit/create_ekicafe,truncate_add_total_check,総合チェック付与テーブルデータ全削除,/usr/local/gitrepos/cafe-train-prj/batch/shell/create_ekicafe/truncate_add_total_check.sh
+395851f3-2749-400d-97d9-d879dbd53bb4,batch/unit/create_ekicafe,add_total_check,総合チェック付与,/usr/local/gitrepos/cafe-train-prj/batch/shell/create_ekicafe/add_total_check.sh
+9cf493c7-3452-42ce-b671-5896fd01e895,batch/unit/create_ekicafe,truncate_create_stationcafe_info,駅カフェ情報作成テーブルデータ全削除,/usr/local/gitrepos/cafe-train-prj/batch/shell/create_ekicafe/truncate_create_stationcafe_info.sh
+4c85c6d0-653a-4760-ac8a-e3d7be397cf3,batch/unit/create_ekicafe,create_stationcafe_info,駅カフェ情報作成,/usr/local/gitrepos/cafe-train-prj/batch/shell/create_ekicafe/create_stationcafe_info.sh
+5423c0f4-ba00-4d2b-868d-2d6b010eca55,batch/unit/create_ekicafe,export_stationcafe_info_report,駅カフェ情報レポート出力,/usr/local/gitrepos/cafe-train-prj/batch/shell/create_ekicafe/export_stationcafe_info_report.sh
+73adaf58-3a86-4ab5-b15f-00279f9b10ac,batch/unit/create_ekicafe,insert_str_stationcafe_info,駅カフェ情報蓄積テーブル挿入,/usr/local/gitrepos/cafe-train-prj/batch/shell/create_ekicafe/insert_str_stationcafe_info.sh
