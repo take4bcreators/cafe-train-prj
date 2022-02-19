@@ -62,6 +62,21 @@ if [ -z "${export_file_path}" ]; then
     exit 1
 fi
 
+# 出力ファイルがない場合は、新規作成して書込権を付与
+# 単体実行時 と Rundeck実行時 で 所有者が異なるため実装
+if [ ! -f "${export_file_path}" ]; then
+    touch "${export_file_path}"
+    chmod a+w "${export_file_path}" 2> ${STD_ERR_FILE}
+    status=$?
+    if [ ${status} -ne 0 ]; then
+        log_msg ${ERR} "出力ファイルへの書込権付与でエラーが発生しました"
+        log_msg ${ERR} "chmodエラーメッセージ...\n$(cat ${STD_ERR_FILE})"
+        delete_std_out_file
+        log_msg ${ERR} "異常終了"
+        exit ${status}
+    fi
+fi
+
 # SQL実行
 psql -d ${DB_NAME} -U ${DB_USER} -f "${exec_sql_file_path}" ${DB_BIND} -v SHL_EXPORT_FILE_PATH="${export_file_path}" > ${STD_OUT_FILE} 2> ${STD_ERR_FILE}
 if [ -s ${STD_OUT_FILE} ]; then
@@ -77,18 +92,6 @@ if [ -s ${STD_ERR_FILE} ]; then
     delete_std_out_file
     log_msg ${ERR} "異常終了"
     exit 1
-fi
-
-# 出力したファイルへ書込権を付与
-# 単体実行時 と Rundeck実行時 で 所有者が異なるため実装
-chmod a+w "${export_file_path}" 2> ${STD_ERR_FILE}
-status=$?
-if [ ${status} -ne 0 ]; then
-    log_msg ${ERR} "出力ファイルへの書込権付与でエラーが発生しました"
-    log_msg ${ERR} "chmodエラーメッセージ...\n$(cat ${STD_ERR_FILE})"
-    delete_std_out_file
-    log_msg ${ERR} "異常終了"
-    exit ${status}
 fi
 
 # 出力確認用ファイルの削除

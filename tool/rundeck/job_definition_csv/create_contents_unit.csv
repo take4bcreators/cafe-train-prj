@@ -27,6 +27,10 @@ fe1d90cd-8973-4ad2-9fe3-a82e59767b94,batch/unit/create_contents,import_mst_page_
 e6a3eff1-c4fe-4118-8c6f-3ef844b8966f,batch/unit/create_contents,import_mst_defined_stationinfo,定義駅情報テーブル読込,/usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/import_mst_defined_stationinfo.sh
 a53d0f5b-c0ce-4533-b92a-f5a505d621e1,batch/unit/create_contents,truncate_merge_defined_stationinfo,定義駅情報併合テーブルデータ全削除,/usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/truncate_merge_defined_stationinfo.sh
 3cc83fe6-19d2-4336-bd4d-5bfe08c20256,batch/unit/create_contents,merge_defined_stationinfo,定義駅情報併合,/usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/merge_defined_stationinfo.sh
+c3705199-b5d7-4ebf-9b87-df10dfddb6fc,batch/unit/create_contents,truncate_mst_numbering_info,駅ナンバリング情報テーブルデータ全削除,/usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/truncate_mst_numbering_info.sh
+660f602b-4095-4103-81fd-67d00ceb05fc,batch/unit/create_contents,import_mst_numbering_info,駅ナンバリング情報テーブル読込,/usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/import_mst_numbering_info.sh
+7457ed46-0e45-4e16-9209-5efdc4224cfc,batch/unit/create_contents,truncate_merge_numbering_info,駅ナンバリング情報併合テーブルデータ全削除,/usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/truncate_merge_numbering_info.sh
+a58cb582-75c2-4f6c-9143-316319b34091,batch/unit/create_contents,merge_numbering_info,駅ナンバリング情報併合,/usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/merge_numbering_info.sh
 cd256b11-df6c-4ca5-9c60-45e78924ddff,batch/unit/create_contents,truncate_tmp_filtering_newest_cafeinfo,駅カフェ情報最新データ抽出テーブルデータ全削除,/usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/truncate_tmp_filtering_newest_cafeinfo.sh
 9296263d-1aa8-44b2-b853-0a0bc4fa8f35,batch/unit/create_contents,filtering_newest_cafeinfo,駅カフェ情報最新データ抽出,/usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/filtering_newest_cafeinfo.sh
 a7a34ee9-cca1-4592-a40c-e70accd676de,batch/unit/create_contents,truncate_tmp_merge_stationinfo,駅情報併合テーブルデータ全削除,/usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/truncate_tmp_merge_stationinfo.sh

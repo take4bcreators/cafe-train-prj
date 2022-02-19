@@ -504,6 +504,78 @@
   uuid: 3cc83fe6-19d2-4336-bd4d-5bfe08c20256
 - defaultTab: nodes
   description: |
+    駅ナンバリング情報テーブルデータ全削除
+  executionEnabled: true
+  group: batch/unit/create_contents
+  id: c3705199-b5d7-4ebf-9b87-df10dfddb6fc
+  loglevel: INFO
+  name: truncate_mst_numbering_info
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/truncate_mst_numbering_info.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: c3705199-b5d7-4ebf-9b87-df10dfddb6fc
+- defaultTab: nodes
+  description: |
+    駅ナンバリング情報テーブル読込
+  executionEnabled: true
+  group: batch/unit/create_contents
+  id: 660f602b-4095-4103-81fd-67d00ceb05fc
+  loglevel: INFO
+  name: import_mst_numbering_info
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/import_mst_numbering_info.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 660f602b-4095-4103-81fd-67d00ceb05fc
+- defaultTab: nodes
+  description: |
+    駅ナンバリング情報併合テーブルデータ全削除
+  executionEnabled: true
+  group: batch/unit/create_contents
+  id: 7457ed46-0e45-4e16-9209-5efdc4224cfc
+  loglevel: INFO
+  name: truncate_merge_numbering_info
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/truncate_merge_numbering_info.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 7457ed46-0e45-4e16-9209-5efdc4224cfc
+- defaultTab: nodes
+  description: |
+    駅ナンバリング情報併合
+  executionEnabled: true
+  group: batch/unit/create_contents
+  id: a58cb582-75c2-4f6c-9143-316319b34091
+  loglevel: INFO
+  name: merge_numbering_info
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_contents/merge_numbering_info.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: a58cb582-75c2-4f6c-9143-316319b34091
+- defaultTab: nodes
+  description: |
     駅カフェ情報最新データ抽出テーブルデータ全削除
   executionEnabled: true
   group: batch/unit/create_contents
