@@ -2,7 +2,7 @@
   description: |
     カフェ情報取得
   executionEnabled: true
-  group: batch/unit
+  group: batch/unit/execution_placesapi
   id: 2dd601e3-c9e2-44fc-9f02-292b7a08dff5
   loglevel: INFO
   name: fetch_gcp_cafe
