@@ -6,6 +6,7 @@ CREATE TABLE :schema.page_contents (
     cp_name TEXT NOT NULL,
     ln_name TEXT NOT NULL,
     st_name TEXT NOT NULL,
+    st_num TEXT NOT NULL,
     cp_url TEXT NOT NULL,
     ln_url TEXT NOT NULL,
     ln_symbol TEXT NOT NULL,

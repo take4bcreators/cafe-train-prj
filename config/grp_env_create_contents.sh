@@ -5,6 +5,7 @@ export MOD_GRP_NAME="create_contents"
 # ファイルパス定義
 #########################
 export GRP_NUMBERING_CSV="${CSV_DIR}/numbering_info.csv"
+export GRP_PAGE_CONT_CSV="${DATA_DIR}/page_contents.csv"
 
 
 #########################
