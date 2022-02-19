@@ -11,9 +11,10 @@ export GRP_REQUEST_CSV="${DATA_DIR}/placesapi_request_data.csv"
 export GRP_REQUEST_REPORT="${DATA_DIR}/request_data_report.txt"
 
 #########################
-# Places API 関連
+# 設定値
 #########################
 export GRP_REQUEST_COST_YEN="4"
+export GRP_REPORT_VALUE_SEPARATOR="、"
 
 #########################
 # PostgreSQLのバインド変数（共通設定に追記）
