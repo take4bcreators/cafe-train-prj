@@ -67,7 +67,7 @@ SELECT
     search_check_flag,
     distance_meter,
     CASE
-        WHEN distance_meter <= 400 THEN 1
+        WHEN distance_meter <= :GRP_RADIUS_METER THEN 1
         ELSE 0 END AS distance_check_flag
 FROM
     tmp1
