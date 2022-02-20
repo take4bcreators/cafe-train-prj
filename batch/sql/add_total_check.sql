@@ -11,6 +11,7 @@ INSERT INTO :schema.tmp_add_total_check (
     search_check_flag,
     distance_meter,
     distance_check_flag,
+    include_flag,
     total_check_flag
 )
 SELECT
@@ -25,9 +26,14 @@ SELECT
     search_check_flag,
     distance_meter,
     distance_check_flag,
+    include_flag,
     CASE
-        WHEN search_check_flag = 1 AND  distance_check_flag = 1 THEN 1
+        WHEN
+            search_check_flag = 1
+            AND  distance_check_flag = 1
+            AND  include_flag = 1
+            THEN 1
         ELSE 0 END AS total_check_flag
 FROM
-    :schema.tmp_add_distance_check
+    :schema.tmp_add_include_flag
 ;
