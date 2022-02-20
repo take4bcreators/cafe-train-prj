@@ -8,6 +8,10 @@ f75f6cac-5daa-4fa1-9cec-d2f039d5fce5,batch/unit/create_ekicafe,truncate_add_sear
 ead3be3f-545a-44da-a707-6413064c51f1,batch/unit/create_ekicafe,add_search_check,検索チェック付与,/usr/local/gitrepos/cafe-train-prj/batch/shell/create_ekicafe/add_search_check.sh
 2d55795f-0684-4059-bd7c-fda82bc45fc8,batch/unit/create_ekicafe,truncate_add_distance_check,距離チェック付与テーブルデータ全削除,/usr/local/gitrepos/cafe-train-prj/batch/shell/create_ekicafe/truncate_add_distance_check.sh
 7148f954-953c-4059-9012-18756e3672a5,batch/unit/create_ekicafe,add_distance_check,距離チェック付与,/usr/local/gitrepos/cafe-train-prj/batch/shell/create_ekicafe/add_distance_check.sh
+08cad889-cef4-4d36-85ea-0d797a3c7e95,batch/unit/create_ekicafe,truncate_mst_exclude_placeid,除外プレイスID情報テーブルデータ全削除,/usr/local/gitrepos/cafe-train-prj/batch/shell/create_ekicafe/truncate_mst_exclude_placeid.sh
+9b48d652-a9d7-4d2c-bb6c-846d7b8e6df6,batch/unit/create_ekicafe,import_mst_exclude_placeid,除外プレイスID情報テーブル読込,/usr/local/gitrepos/cafe-train-prj/batch/shell/create_ekicafe/import_mst_exclude_placeid.sh
+d58b63ca-8e4b-4a27-83e2-ea3098904980,batch/unit/create_ekicafe,truncate_add_include_flag,包含フラグ付与テーブルデータ全削除,/usr/local/gitrepos/cafe-train-prj/batch/shell/create_ekicafe/truncate_add_include_flag.sh
+510c5523-c9e7-4285-83f3-5d6b4a5a4943,batch/unit/create_ekicafe,add_include_flag,包含フラグ付与,/usr/local/gitrepos/cafe-train-prj/batch/shell/create_ekicafe/add_include_flag.sh
 3d071380-4694-49f3-bf0d-433d07b20faa,batch/unit/create_ekicafe,truncate_add_total_check,総合チェック付与テーブルデータ全削除,/usr/local/gitrepos/cafe-train-prj/batch/shell/create_ekicafe/truncate_add_total_check.sh
 395851f3-2749-400d-97d9-d879dbd53bb4,batch/unit/create_ekicafe,add_total_check,総合チェック付与,/usr/local/gitrepos/cafe-train-prj/batch/shell/create_ekicafe/add_total_check.sh
 9cf493c7-3452-42ce-b671-5896fd01e895,batch/unit/create_ekicafe,truncate_create_stationcafe_info,駅カフェ情報作成テーブルデータ全削除,/usr/local/gitrepos/cafe-train-prj/batch/shell/create_ekicafe/truncate_create_stationcafe_info.sh

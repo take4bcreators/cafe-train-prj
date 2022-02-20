@@ -59,6 +59,26 @@
         uuid: 7148f954-953c-4059-9012-18756e3672a5
     - jobref:
         group: batch/unit/create_ekicafe
+        name: truncate_mst_exclude_placeid
+        nodeStep: 'true'
+        uuid: 08cad889-cef4-4d36-85ea-0d797a3c7e95
+    - jobref:
+        group: batch/unit/create_ekicafe
+        name: import_mst_exclude_placeid
+        nodeStep: 'true'
+        uuid: 9b48d652-a9d7-4d2c-bb6c-846d7b8e6df6
+    - jobref:
+        group: batch/unit/create_ekicafe
+        name: truncate_add_include_flag
+        nodeStep: 'true'
+        uuid: d58b63ca-8e4b-4a27-83e2-ea3098904980
+    - jobref:
+        group: batch/unit/create_ekicafe
+        name: add_include_flag
+        nodeStep: 'true'
+        uuid: 510c5523-c9e7-4285-83f3-5d6b4a5a4943
+    - jobref:
+        group: batch/unit/create_ekicafe
         name: truncate_add_total_check
         nodeStep: 'true'
         uuid: 3d071380-4694-49f3-bf0d-433d07b20faa

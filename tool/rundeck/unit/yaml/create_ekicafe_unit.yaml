@@ -162,6 +162,78 @@
   uuid: 7148f954-953c-4059-9012-18756e3672a5
 - defaultTab: nodes
   description: |
+    除外プレイスID情報テーブルデータ全削除
+  executionEnabled: true
+  group: batch/unit/create_ekicafe
+  id: 08cad889-cef4-4d36-85ea-0d797a3c7e95
+  loglevel: INFO
+  name: truncate_mst_exclude_placeid
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_ekicafe/truncate_mst_exclude_placeid.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 08cad889-cef4-4d36-85ea-0d797a3c7e95
+- defaultTab: nodes
+  description: |
+    除外プレイスID情報テーブル読込
+  executionEnabled: true
+  group: batch/unit/create_ekicafe
+  id: 9b48d652-a9d7-4d2c-bb6c-846d7b8e6df6
+  loglevel: INFO
+  name: import_mst_exclude_placeid
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_ekicafe/import_mst_exclude_placeid.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 9b48d652-a9d7-4d2c-bb6c-846d7b8e6df6
+- defaultTab: nodes
+  description: |
+    包含フラグ付与テーブルデータ全削除
+  executionEnabled: true
+  group: batch/unit/create_ekicafe
+  id: d58b63ca-8e4b-4a27-83e2-ea3098904980
+  loglevel: INFO
+  name: truncate_add_include_flag
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_ekicafe/truncate_add_include_flag.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: d58b63ca-8e4b-4a27-83e2-ea3098904980
+- defaultTab: nodes
+  description: |
+    包含フラグ付与
+  executionEnabled: true
+  group: batch/unit/create_ekicafe
+  id: 510c5523-c9e7-4285-83f3-5d6b4a5a4943
+  loglevel: INFO
+  name: add_include_flag
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_ekicafe/add_include_flag.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 510c5523-c9e7-4285-83f3-5d6b4a5a4943
+- defaultTab: nodes
+  description: |
     総合チェック付与テーブルデータ全削除
   executionEnabled: true
   group: batch/unit/create_ekicafe
