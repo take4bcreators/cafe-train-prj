@@ -41,5 +41,6 @@ FROM
 LEFT OUTER JOIN
     :schema.mst_numbering_info T2
 ON
-    T1.station_cd = T2.station_cd
+    T1.station_cd      = T2.station_cd
+    AND T1.new_line_cd = T2.new_line_cd
 ;
