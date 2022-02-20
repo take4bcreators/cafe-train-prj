@@ -5,6 +5,8 @@ CREATE TABLE :schema.tmp_add_search_check (
     search_name TEXT,
     place_id TEXT,
     place_name TEXT,
-    search_check_flag INTEGER,
+    place_lat TEXT,
+    place_lon TEXT,
+    search_check_flag INTEGER NOT NULL,
     PRIMARY KEY(search_lat, search_lon, search_name, place_id)
 );

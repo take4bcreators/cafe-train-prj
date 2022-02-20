@@ -53,16 +53,13 @@ lat_lon_count=$(psql -tAq -d ${DB_NAME} -U ${DB_USER} -c "${lat_lon_count_sql}")
 chain_count_sql="SELECT COUNT(*) FROM ${DB_SCHEMA}.mst_fetch_target_chain;"
 chain_count=$(psql -tAq -d ${DB_NAME} -U ${DB_USER} -c "${chain_count_sql}")
 
-# セパレータを指定
-sep_char="、"
-
 # 取得対象のチェーン名称を取得
-chain_names_sql="SELECT STRING_AGG(chain_name, '${sep_char}') FROM ${DB_SCHEMA}.mst_filtering_fetch_cafechain;"
+chain_names_sql="SELECT STRING_AGG(chain_name, '${GRP_REPORT_VALUE_SEPARATOR}') FROM ${DB_SCHEMA}.mst_filtering_fetch_cafechain;"
 chain_names=$(psql -tAq -d ${DB_NAME} -U ${DB_USER} -c "${chain_names_sql}")
 
 # 取得対象の事業者名称を取得
 company_names_sql="
-    SELECT STRING_AGG(company_name, '${sep_char}')
+    SELECT STRING_AGG(company_name, '${GRP_REPORT_VALUE_SEPARATOR}')
     FROM ${DB_SCHEMA}.ejp_company
     WHERE company_cd IN (
         SELECT target_cd
@@ -74,7 +71,7 @@ company_names=$(psql -tAq -d ${DB_NAME} -U ${DB_USER} -c "${company_names_sql}")
 
 # 取得対象の路線名称を取得
 line_names_sql="
-    SELECT STRING_AGG(line_name, '${sep_char}')
+    SELECT STRING_AGG(line_name, '${GRP_REPORT_VALUE_SEPARATOR}')
     FROM ${DB_SCHEMA}.ejp_line
     WHERE line_cd IN (
         SELECT target_cd
@@ -86,7 +83,7 @@ line_names=$(psql -tAq -d ${DB_NAME} -U ${DB_USER} -c "${line_names_sql}")
 
 # 取得対象の駅を取得
 station_names_sql="
-    SELECT STRING_AGG(station_name, '${sep_char}')
+    SELECT STRING_AGG(station_name, '${GRP_REPORT_VALUE_SEPARATOR}')
     FROM (
         SELECT DISTINCT station_name
         FROM ${DB_SCHEMA}.ejp_station
@@ -114,21 +111,6 @@ request_count_sum=$(( ${lat_lon_count} * ${chain_count} ))
 request_cost_sum=$(( ${request_count_sum} * ${GRP_REQUEST_COST_YEN} ))
 
 # レポート作成
-# cat << EOF > ${GRP_REQUEST_REPORT}
-# 【リクエストレポート】
-#     ■ 対象緯度経度数        ：   $(printf '%8s\n' ${lat_lon_count})
-#     ■ 対象チェーン数        ：   $(printf '%8s\n' ${chain_count})
-#     ■ 設定リクエスト単価    ： ¥ $(printf '%8s\n' ${GRP_REQUEST_COST_YEN})
-#     ■ 合計リクエスト数      ：   $(printf '%8s\n' ${request_count_sum})
-#     ■ 予想コスト            ： ¥ $(printf '%8s\n' ${request_cost_sum})
-
-# 【取得予定チェーン】
-# ${chain_names}
-
-# ${now_date} 出力
-# EOF
-
-# レポート作成
 report_text="
 【リクエストレポート】
     ■ 対象緯度経度数        ：   $(printf '%8s\n' ${lat_lon_count})
@@ -152,8 +134,30 @@ report_text="
 ${now_date} 出力
 "
 
+# レポートファイルがない場合は、新規作成して書込権を付与
+# 単体実行時 と Rundeck実行時 で 所有者が異なるため実装
+if [ ! -f "${GRP_REQUEST_REPORT}" ]; then
+    touch "${GRP_REQUEST_REPORT}"
+    chmod a+w "${GRP_REQUEST_REPORT}" 2> ${STD_ERR_FILE}
+    status=$?
+    if [ ${status} -ne 0 ]; then
+        log_msg ${ERR} "レポートファイルへの書込権付与でエラーが発生しました"
+        log_msg ${ERR} "chmod コマンドエラーメッセージ...\n$(cat ${STD_ERR_FILE})"
+        delete_std_out_file
+        log_msg ${ERR} "異常終了"
+        exit ${status}
+    fi
+fi
+
 # レポート出力
 echo -e "${report_text}" > ${GRP_REQUEST_REPORT}
+status=$?
+if [ ${status} -ne 0 ]; then
+    log_msg ${ERR} "レポート出力でエラーが発生しました"
+    log_msg ${ERR} "異常終了"
+    exit ${status}
+fi
 
-log_msg ${INFO} "実行完了"
+delete_std_out_file
+log_msg ${INFO} "正常終了"
 exit 0
