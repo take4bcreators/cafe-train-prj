@@ -74,7 +74,7 @@ fi
 
 
 # 取得対象チェーンの検索名称を取得
-chain_name_list_sql="SELECT STRING_AGG(search_name, ' ') FROM ${DB_SCHEMA}.mst_filtering_fetch_cafechain;"
+chain_name_list_sql="SELECT STRING_AGG(api_search_word, ' ') FROM ${DB_SCHEMA}.mst_filtering_fetch_cafechain;"
 chain_name_list=$(psql -tAq -d ${DB_NAME} -U ${DB_USER} -c "${chain_name_list_sql}")
 
 if [ -z "${chain_name_list}" ]; then
