@@ -1,0 +1,342 @@
+- defaultTab: nodes
+  description: |
+    カフェ情報テーブルデータ全削除
+  executionEnabled: true
+  group: batch/unit/create_ekicafe
+  id: 32f59d98-2ff1-4b46-bf99-32425317412e
+  loglevel: INFO
+  name: truncate_gmp_cafe
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_ekicafe/truncate_gmp_cafe.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 32f59d98-2ff1-4b46-bf99-32425317412e
+- defaultTab: nodes
+  description: |
+    カフェ情報読込
+  executionEnabled: true
+  group: batch/unit/create_ekicafe
+  id: 04485f4f-2507-41d2-a839-20d6c13e0604
+  loglevel: INFO
+  name: import_gmp_cafe
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_ekicafe/import_gmp_cafe.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 04485f4f-2507-41d2-a839-20d6c13e0604
+- defaultTab: nodes
+  description: |
+    カフェ情報蓄積テーブル挿入
+  executionEnabled: true
+  group: batch/unit/create_ekicafe
+  id: b5e357ac-115c-4d62-87a7-d5b7d9d130b5
+  loglevel: INFO
+  name: insert_str_cafe
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_ekicafe/insert_str_cafe.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: b5e357ac-115c-4d62-87a7-d5b7d9d130b5
+- defaultTab: nodes
+  description: |
+    駅名情報付与テーブルデータ全削除
+  executionEnabled: true
+  group: batch/unit/create_ekicafe
+  id: 0d0484af-538b-4756-8b7a-61fd3823c64b
+  loglevel: INFO
+  name: truncate_add_station_name
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_ekicafe/truncate_add_station_name.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 0d0484af-538b-4756-8b7a-61fd3823c64b
+- defaultTab: nodes
+  description: |
+    駅名情報付与
+  executionEnabled: true
+  group: batch/unit/create_ekicafe
+  id: 8091a7c5-0494-4136-b85b-a96f9489d1a8
+  loglevel: INFO
+  name: add_station_name
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_ekicafe/add_station_name.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 8091a7c5-0494-4136-b85b-a96f9489d1a8
+- defaultTab: nodes
+  description: |
+    検索チェック付与テーブルデータ全削除
+  executionEnabled: true
+  group: batch/unit/create_ekicafe
+  id: f75f6cac-5daa-4fa1-9cec-d2f039d5fce5
+  loglevel: INFO
+  name: truncate_add_search_check
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_ekicafe/truncate_add_search_check.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: f75f6cac-5daa-4fa1-9cec-d2f039d5fce5
+- defaultTab: nodes
+  description: |
+    検索チェック付与
+  executionEnabled: true
+  group: batch/unit/create_ekicafe
+  id: ead3be3f-545a-44da-a707-6413064c51f1
+  loglevel: INFO
+  name: add_search_check
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_ekicafe/add_search_check.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: ead3be3f-545a-44da-a707-6413064c51f1
+- defaultTab: nodes
+  description: |
+    距離チェック付与テーブルデータ全削除
+  executionEnabled: true
+  group: batch/unit/create_ekicafe
+  id: 2d55795f-0684-4059-bd7c-fda82bc45fc8
+  loglevel: INFO
+  name: truncate_add_distance_check
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_ekicafe/truncate_add_distance_check.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 2d55795f-0684-4059-bd7c-fda82bc45fc8
+- defaultTab: nodes
+  description: |
+    距離チェック付与
+  executionEnabled: true
+  group: batch/unit/create_ekicafe
+  id: 7148f954-953c-4059-9012-18756e3672a5
+  loglevel: INFO
+  name: add_distance_check
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_ekicafe/add_distance_check.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 7148f954-953c-4059-9012-18756e3672a5
+- defaultTab: nodes
+  description: |
+    除外プレイスID情報テーブルデータ全削除
+  executionEnabled: true
+  group: batch/unit/create_ekicafe
+  id: 08cad889-cef4-4d36-85ea-0d797a3c7e95
+  loglevel: INFO
+  name: truncate_mst_exclude_placeid
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_ekicafe/truncate_mst_exclude_placeid.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 08cad889-cef4-4d36-85ea-0d797a3c7e95
+- defaultTab: nodes
+  description: |
+    除外プレイスID情報テーブル読込
+  executionEnabled: true
+  group: batch/unit/create_ekicafe
+  id: 9b48d652-a9d7-4d2c-bb6c-846d7b8e6df6
+  loglevel: INFO
+  name: import_mst_exclude_placeid
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_ekicafe/import_mst_exclude_placeid.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 9b48d652-a9d7-4d2c-bb6c-846d7b8e6df6
+- defaultTab: nodes
+  description: |
+    包含フラグ付与テーブルデータ全削除
+  executionEnabled: true
+  group: batch/unit/create_ekicafe
+  id: d58b63ca-8e4b-4a27-83e2-ea3098904980
+  loglevel: INFO
+  name: truncate_add_include_flag
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_ekicafe/truncate_add_include_flag.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: d58b63ca-8e4b-4a27-83e2-ea3098904980
+- defaultTab: nodes
+  description: |
+    包含フラグ付与
+  executionEnabled: true
+  group: batch/unit/create_ekicafe
+  id: 510c5523-c9e7-4285-83f3-5d6b4a5a4943
+  loglevel: INFO
+  name: add_include_flag
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_ekicafe/add_include_flag.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 510c5523-c9e7-4285-83f3-5d6b4a5a4943
+- defaultTab: nodes
+  description: |
+    総合チェック付与テーブルデータ全削除
+  executionEnabled: true
+  group: batch/unit/create_ekicafe
+  id: 3d071380-4694-49f3-bf0d-433d07b20faa
+  loglevel: INFO
+  name: truncate_add_total_check
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_ekicafe/truncate_add_total_check.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 3d071380-4694-49f3-bf0d-433d07b20faa
+- defaultTab: nodes
+  description: |
+    総合チェック付与
+  executionEnabled: true
+  group: batch/unit/create_ekicafe
+  id: 395851f3-2749-400d-97d9-d879dbd53bb4
+  loglevel: INFO
+  name: add_total_check
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_ekicafe/add_total_check.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 395851f3-2749-400d-97d9-d879dbd53bb4
+- defaultTab: nodes
+  description: |
+    駅カフェ情報作成テーブルデータ全削除
+  executionEnabled: true
+  group: batch/unit/create_ekicafe
+  id: 9cf493c7-3452-42ce-b671-5896fd01e895
+  loglevel: INFO
+  name: truncate_create_stationcafe_info
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_ekicafe/truncate_create_stationcafe_info.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 9cf493c7-3452-42ce-b671-5896fd01e895
+- defaultTab: nodes
+  description: |
+    駅カフェ情報作成
+  executionEnabled: true
+  group: batch/unit/create_ekicafe
+  id: 4c85c6d0-653a-4760-ac8a-e3d7be397cf3
+  loglevel: INFO
+  name: create_stationcafe_info
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_ekicafe/create_stationcafe_info.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 4c85c6d0-653a-4760-ac8a-e3d7be397cf3
+- defaultTab: nodes
+  description: |
+    駅カフェ情報レポート出力
+  executionEnabled: true
+  group: batch/unit/create_ekicafe
+  id: 5423c0f4-ba00-4d2b-868d-2d6b010eca55
+  loglevel: INFO
+  name: export_stationcafe_info_report
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_ekicafe/export_stationcafe_info_report.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 5423c0f4-ba00-4d2b-868d-2d6b010eca55
+- defaultTab: nodes
+  description: |
+    駅カフェ情報蓄積テーブル挿入
+  executionEnabled: true
+  group: batch/unit/create_ekicafe
+  id: 73adaf58-3a86-4ab5-b15f-00279f9b10ac
+  loglevel: INFO
+  name: insert_str_stationcafe_info
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/create_ekicafe/insert_str_stationcafe_info.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 73adaf58-3a86-4ab5-b15f-00279f9b10ac

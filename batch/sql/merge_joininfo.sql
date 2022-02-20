@@ -1,7 +1,8 @@
--- 接続駅情報併合テーブルへの挿入
+-- 接続駅情報併合 テーブルへの挿入
 INSERT INTO :schema.tmp_merge_joininfo (
     station_cd,
     next_station_cd,
+    numbering,
     station_name,
     new_line_cd,
     origin_line_cd,
@@ -53,6 +54,7 @@ INSERT INTO :schema.tmp_merge_joininfo (
 SELECT
     T1.station_cd,
     COALESCE(T2.station_cd2, 0) AS next_station_cd,
+    T1.numbering,
     T1.station_name,
     T1.new_line_cd,
     T1.origin_line_cd,

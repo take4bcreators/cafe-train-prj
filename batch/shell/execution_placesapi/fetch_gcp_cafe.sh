@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 機能別設定ファイル名を指定
-grp_env_file_name='grp_env_execution_placesapi.sh'
+grp_env_file_name="grp_env_execution_placesapi.sh"
 
 # シェルの名前を格納
 exec_shell_name=$(basename $0)
@@ -83,28 +83,43 @@ if [ -z "${chain_name_list}" ]; then
 fi
 
 
-# リクエスト用CSVの確認
-request_csv="${DATA_DIR}/placesapi_request_data.csv"
-
-if [ ! -f "${request_csv}" ]; then
+# リクエスト用CSVファイルのチェック
+if [ ! -f "${GRP_REQUEST_CSV}" ]; then
     log_msg ${ERR} "リクエスト用CSVがありません"
-    log_msg ${ERR} "CSVファイルパス：${request_csv}"
+    log_msg ${ERR} "CSVファイルパス：${GRP_REQUEST_CSV}"
     exit 1
 fi
 
-if [ ! -s "${request_csv}" ]; then
+if [ ! -s "${GRP_REQUEST_CSV}" ]; then
     log_msg ${ERR} "リクエスト用CSVにデータがありません"
-    log_msg ${ERR} "CSVファイルパス：${request_csv}"
+    log_msg ${ERR} "CSVファイルパス：${GRP_REQUEST_CSV}"
     exit 1
 fi
 
+
+# 結果格納用TSVファイルがない場合は、新規作成して書込権を付与
+# 単体実行時 と Rundeck実行時 で 所有者が異なるため実装
+if [ ! -f "${GRP_GMP_TSV}" ]; then
+    touch "${GRP_GMP_TSV}"
+    chmod a+w "${GRP_GMP_TSV}" 2> ${STD_ERR_FILE}
+    status=$?
+    if [ ${status} -ne 0 ]; then
+        log_msg ${ERR} "結果格納用TSVファイルへの書込権付与でエラーが発生しました"
+        log_msg ${ERR} "chmodコマンド戻り値：${status}"
+        log_msg ${ERR} "chmodコマンドエラーメッセージ...\n$(cat ${STD_ERR_FILE})"
+        delete_std_out_file
+        log_msg ${ERR} "異常終了"
+        exit 1
+    fi
+fi
 
 # 結果格納用TSVファイルの初期化
 : > "${GRP_GMP_TSV}"
-rtn_cd=$?
+status=$?
 
-if [ ${rtn_cd} -ne 0 ]; then
+if [ ${status} -ne 0 ]; then
     log_msg ${ERR} "結果用TSVファイルの初期化でエラーが発生しました"
+    log_msg ${ERR} ":コマンド戻り値：${status}"
     log_msg ${ERR} "TSVファイルパス：${GRP_GMP_TSV}"
     exit 1
 fi
@@ -118,7 +133,7 @@ get_cnt=0
 
 # Places API 実行開始
 log_msg ${INFO} "カフェ情報取得開始"
-for latlon in $(cat ${request_csv} | sed '/^$/d'); do
+for latlon in $(cat ${GRP_REQUEST_CSV} | sed '/^$/d'); do
     let latlon_cnt++
     log_msg ${INFO} "地点カウント：${latlon_cnt} 地点：${latlon}"
     latlon_tsv=$(echo ${latlon} | sed 's/,/\t/')
@@ -128,13 +143,13 @@ for latlon in $(cat ${request_csv} | sed '/^$/d'); do
         # リクエスト実行
         curl -Ss -X GET "https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=${GM_API_KEY}&location=${latlon}&radius=${GRP_RADIUS_METER}&language=ja&keyword=${chain}" \
             > ${GRP_CURL_RES_TMP} 2> ${STD_ERR_FILE}
-        rtn_cd=$?
+        status=$?
         
         # curl でエラーが発生した場合は異常終了
-        if [ ${rtn_cd} -ne 0 ] || [ -s ${STD_ERR_FILE} ]; then
+        if [ ${status} -ne 0 ] || [ -s ${STD_ERR_FILE} ]; then
             log_msg ${ERR} "APIリクエスト実行エラー"
-            log_msg ${ERR} "curl戻り値：${rtn_cd}"
-            log_msg ${ERR} "curlエラーメッセージ...\n$(cat ${STD_ERR_FILE})"
+            log_msg ${ERR} "curlコマンド戻り値：${status}"
+            log_msg ${ERR} "curlコマンドエラーメッセージ...\n$(cat ${STD_ERR_FILE})"
             log_msg ${INFO} "リクエスト実行数：${req_cnt}"
             log_msg ${INFO} "検索結果ゼロ数：${zero_cnt}"
             log_msg ${INFO} "結果加工実行数：${get_cnt}"
@@ -160,15 +175,15 @@ for latlon in $(cat ${request_csv} | sed '/^$/d'); do
             | sed 's/"//g' \
             | awk -v latlon="${latlon_tsv}" -v chain="${chain}" 'BEGIN{OFS="\t"}{print latlon, chain, $0}' \
             >> ${GRP_GMP_TSV} 2> ${STD_ERR_FILE}
-        rtn_cd=$?
+        status=$?
         
         # レスポンスデータの加工時にエラーが発生した場合は異常終了
         #   考慮不要なエラー出力により、処理が中断してしまう可能性もあるが、
         #   無駄にAPIリクエストをしない為にも一旦実装。
-        if [ ${rtn_cd} -ne 0 ] || [ -s ${STD_ERR_FILE} ]; then
+        if [ ${status} -ne 0 ] || [ -s ${STD_ERR_FILE} ]; then
             log_msg ${ERR} "レスポンスデータの加工エラー"
-            log_msg ${ERR} "AWK戻り値：${rtn_cd}"
-            log_msg ${ERR} "AWKエラーメッセージ...\n$(cat ${STD_ERR_FILE})"
+            log_msg ${ERR} "awkコマンド戻り値：${status}"
+            log_msg ${ERR} "awkコマンドエラーメッセージ...\n$(cat ${STD_ERR_FILE})"
             log_msg ${INFO} "リクエスト実行数：${req_cnt}"
             log_msg ${INFO} "検索結果ゼロ数：${zero_cnt}"
             log_msg ${INFO} "結果加工実行数：${get_cnt}"
@@ -195,6 +210,6 @@ if [ -f ${GRP_CURL_RES_TMP} ]; then
     rm ${GRP_CURL_RES_TMP}
 fi
 delete_std_out_file
-log_msg ${INFO} "実行完了"
+log_msg ${INFO} "正常終了"
 
 exit 0

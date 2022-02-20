@@ -1,5 +1,6 @@
 CREATE TABLE :schema.tmp_merge_stationinfo (
     station_cd INTEGER,
+    numbering TEXT,
     station_name TEXT NOT NULL,
     new_line_cd INTEGER,
     origin_line_cd INTEGER,

@@ -1,7 +1,8 @@
--- 路線情報併合テーブルへの挿入
+-- 路線情報併合 テーブルへの挿入
 INSERT INTO :schema.tmp_merge_lineinfo (
     station_cd,
     next_station_cd,
+    numbering,
     station_name,
     new_line_cd,
     origin_line_cd,
@@ -60,6 +61,7 @@ INSERT INTO :schema.tmp_merge_lineinfo (
 SELECT
     T1.station_cd,
     T1.next_station_cd,
+    T1.numbering,
     T1.station_name,
     T1.new_line_cd,
     T1.origin_line_cd,

@@ -1,6 +1,7 @@
--- 駅情報併合テーブルへの挿入
+-- 駅情報併合 テーブルへの挿入
 INSERT INTO :schema.tmp_merge_stationinfo (
     station_cd,
+    numbering,
     station_name,
     new_line_cd,
     origin_line_cd,
@@ -51,6 +52,7 @@ INSERT INTO :schema.tmp_merge_stationinfo (
 )
 SELECT
     T1.station_cd,
+    T1.numbering,
     T1.station_name,
     T1.new_line_cd,
     T1.origin_line_cd,
@@ -99,7 +101,7 @@ SELECT
     T2.cflag39,
     T2.cflag40
 FROM
-    :schema.tmp_merge_defined_stationinfo T1
+    :schema.tmp_merge_numbering_info T1
 LEFT OUTER JOIN
     :schema.tmp_filtering_newest_cafeinfo T2
 ON
