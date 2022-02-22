@@ -72,6 +72,18 @@ if [ -z "${GRP_RADIUS_METER}"  ]; then
     exit 1
 fi
 
+if [ -z "${RETRY_INTERVAL_SEC}"  ]; then
+    log_msg ${ERR} "必須の変数が設定されていません"
+    log_msg ${ERR} "変数名：RETRY_INTERVAL_SEC"
+    exit 1
+fi
+
+if [ -z "${MAX_RETRY_TIMES}"  ]; then
+    log_msg ${ERR} "必須の変数が設定されていません"
+    log_msg ${ERR} "変数名：MAX_RETRY_TIMES"
+    exit 1
+fi
+
 
 # 取得対象チェーンの検索名称を取得
 chain_name_list_sql="SELECT STRING_AGG(api_search_word, ' ') FROM ${DB_SCHEMA}.mst_filtering_fetch_cafechain;"
@@ -140,27 +152,49 @@ for latlon in $(cat ${GRP_REQUEST_CSV} | sed '/^$/d'); do
     for chain in ${chain_name_list}; do
         let req_cnt++
         
-        # リクエスト実行
-        curl -Ss -X GET "https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=${GM_API_KEY}&location=${latlon}&radius=${GRP_RADIUS_METER}&language=ja&keyword=${chain}" \
-            > ${GRP_CURL_RES_TMP} 2> ${STD_ERR_FILE}
-        status=$?
-        
-        # curl でエラーが発生した場合は異常終了
-        if [ ${status} -ne 0 ] || [ -s ${STD_ERR_FILE} ]; then
-            log_msg ${ERR} "APIリクエスト実行エラー"
-            log_msg ${ERR} "curlコマンド戻り値：${status}"
-            log_msg ${ERR} "curlコマンドエラーメッセージ...\n$(cat ${STD_ERR_FILE})"
-            log_msg ${INFO} "リクエスト実行数：${req_cnt}"
-            log_msg ${INFO} "検索結果ゼロ数：${zero_cnt}"
-            log_msg ${INFO} "結果加工実行数：${get_cnt}"
-            if [ -f ${GRP_CURL_RES_TMP} ]; then
-                log_msg ${INFO} "一時ファイルを削除：${GRP_CURL_RES_TMP}"
-                rm ${GRP_CURL_RES_TMP}
+        # 自動リトライのためのループ
+        for i in $(seq 0 ${MAX_RETRY_TIMES});do
+            # リクエスト実行
+            curl -Ss -X GET "https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=${GM_API_KEY}&location=${latlon}&radius=${GRP_RADIUS_METER}&language=ja&keyword=${chain}" \
+                > ${GRP_CURL_RES_TMP} 2> ${STD_ERR_FILE}
+            status=$?
+            
+            # エラーが発生していない場合は、ループを抜けてレスポンスの加工に進む
+            if [ ${status} -eq 0 ] && [ ! -s ${STD_ERR_FILE} ]; then
+                break
             fi
-            delete_std_out_file
-            log_msg ${ERR} "異常終了"
-            exit 1
-        fi
+            
+            # この先へ進むということは、curl でエラーが発生しているということ
+            # 最大リトライ関数に達している場合は、異常終了
+            if [ ${i} -eq ${MAX_RETRY_TIMES} ]; then
+                log_msg ${ERR} "APIリクエスト実行エラー"
+                log_msg ${ERR} "curlコマンド戻り値：${status}"
+                log_msg ${ERR} "curlコマンドエラーメッセージ...\n$(cat ${STD_ERR_FILE})"
+                log_msg ${INFO} "リクエスト実行数：${req_cnt}"
+                log_msg ${INFO} "検索結果ゼロ数：${zero_cnt}"
+                log_msg ${INFO} "結果加工実行数：${get_cnt}"
+                if [ -f ${GRP_CURL_RES_TMP} ]; then
+                    log_msg ${INFO} "一時ファイルを削除：${GRP_CURL_RES_TMP}"
+                    rm ${GRP_CURL_RES_TMP}
+                fi
+                delete_std_out_file
+                log_msg ${ERR} "異常終了"
+                exit 1
+            fi
+            
+            log_msg ${WARN} "APIリクエスト実行エラー"
+            log_msg ${WARN} "curlコマンド戻り値：${status}"
+            log_msg ${WARN} "curlコマンドエラーメッセージ...\n$(cat ${STD_ERR_FILE})"
+            
+            # リトライ前スリープの実行
+            sleepsec="$(( ${RETRY_INTERVAL_SEC} * 2 ** ${i} ))"
+            log_msg ${INFO} "リトライ前スリープ開始"
+            log_msg ${INFO} "スリープ時間：${sleepsec}"
+            sleep ${sleepsec}
+            log_msg ${INFO} "リトライ前スリープ終了"
+            retrycnt="$(( ${i} + 1 ))"
+            log_msg ${INFO} "リトライを開始します：${retrycnt} 回目"
+        done
         
         # レスポンスステータス（検索結果）が 0 であればスキップ
         api_status=$(cat ${GRP_CURL_RES_TMP} | jq -r '.status')
