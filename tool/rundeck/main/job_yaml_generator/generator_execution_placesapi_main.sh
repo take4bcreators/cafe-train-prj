@@ -3,7 +3,7 @@
 # 機能ごとにファイルを用意して指定する
 input_csv='../../job_definition_csv/execution_placesapi_unit.csv'
 output_yaml='../yaml/execution_placesapi_main.yaml'
-main_job_name='execution_placesapi'
+main_job_name='JB1003_execution_placesapi'
 
 # 固定指定
 template_ref_yaml='./job_ref_template.yaml'

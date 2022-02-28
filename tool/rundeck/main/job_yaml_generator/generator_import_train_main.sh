@@ -3,7 +3,7 @@
 # 機能ごとにファイルを用意して指定する
 input_csv='../../job_definition_csv/import_train_unit.csv'
 output_yaml='../yaml/import_train_main.yaml'
-main_job_name='import_train'
+main_job_name='JB1001_import_train'
 
 # 固定指定
 template_ref_yaml='./job_ref_template.yaml'

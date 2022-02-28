@@ -1,6 +1,6 @@
 MAINUUID,MAINJOBDIR,MAINJOBNAME,MAINJOBDESC
-c7f6533b-ec8b-4964-9b1f-464b08795190,batch/main,import_train,駅データ読み込み
-f12b309c-1963-4d85-8147-2a1de9bb9fc5,batch/main,create_request,PlaceAPIリクエスト作成
-ebca8262-d06c-4125-9241-6ace480fbb3b,batch/main,execution_placesapi,PlaceAPIリクエスト実行
-e6487b18-0f13-4104-8158-ff8bcccf3a2d,batch/main,create_ekicafe,駅カフェ情報作成
-aefbdf14-d26c-44e1-9e96-9dffb60e553c,batch/main,create_contents,サイトページコンテンツ作成
+c7f6533b-ec8b-4964-9b1f-464b08795190,batch/main,JB1001_import_train,駅データ読み込み
+f12b309c-1963-4d85-8147-2a1de9bb9fc5,batch/main,JB1002_create_request,PlaceAPIリクエスト作成
+ebca8262-d06c-4125-9241-6ace480fbb3b,batch/main,JB1003_execution_placesapi,PlaceAPIリクエスト実行
+e6487b18-0f13-4104-8158-ff8bcccf3a2d,batch/main,JB1004_create_ekicafe,駅カフェ情報作成
+aefbdf14-d26c-44e1-9e96-9dffb60e553c,batch/main,JB1005_create_contents,サイトページコンテンツ作成
