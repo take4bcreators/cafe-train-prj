@@ -13,3 +13,9 @@ export GRP_CURL_RES_TMP="${TMP_DIR}/curlres.$$.tmp"
 #########################
 export GRP_RADIUS_METER="400"
 
+#########################
+# 設定値の定義
+#########################
+export RETRY_INTERVAL_SEC=30
+export MAX_RETRY_TIMES=3
+
