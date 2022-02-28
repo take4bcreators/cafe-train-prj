@@ -20,5 +20,8 @@ work/*
 # 駅データJP CSVデータ
 batch/csv/ekidatajp/*
 
+# Gatsby側の data フォルダ内
+ssg/src/data/*
+
 # すべての .gitkeep は Git管理対象内 にする
 !.gitkeep
