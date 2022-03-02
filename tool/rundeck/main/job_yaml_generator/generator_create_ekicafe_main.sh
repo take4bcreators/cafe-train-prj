@@ -3,7 +3,7 @@
 # 機能ごとにファイルを用意して指定する
 input_csv='../../job_definition_csv/create_ekicafe_unit.csv'
 output_yaml='../yaml/create_ekicafe_main.yaml'
-main_job_name='create_ekicafe'
+main_job_name='JB1004_create_ekicafe'
 
 # 固定指定
 template_ref_yaml='./job_ref_template.yaml'
