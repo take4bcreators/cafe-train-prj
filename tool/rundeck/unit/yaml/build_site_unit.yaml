@@ -1,0 +1,54 @@
+- defaultTab: nodes
+  description: |
+    コンテンツCSVコピー
+  executionEnabled: true
+  group: batch/unit/build_site
+  id: d29555de-fbe0-4609-adbe-453844daebaa
+  loglevel: INFO
+  name: copy_contents_csv
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/build_site/copy_contents_csv.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: d29555de-fbe0-4609-adbe-453844daebaa
+- defaultTab: nodes
+  description: |
+    静的サイトデータビルド
+  executionEnabled: true
+  group: batch/unit/build_site
+  id: 2844d761-708c-49fc-9097-57970148c89e
+  loglevel: INFO
+  name: build_staticsite_data
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/build_site/build_staticsite_data.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 2844d761-708c-49fc-9097-57970148c89e
+- defaultTab: nodes
+  description: |
+    静的サイトデータZIP作成
+  executionEnabled: true
+  group: batch/unit/build_site
+  id: 0163943b-e5e0-40b4-a35b-852f1c7de5e5
+  loglevel: INFO
+  name: create_staticsite_data_zip
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/build_site/create_staticsite_data_zip.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 0163943b-e5e0-40b4-a35b-852f1c7de5e5

@@ -1,0 +1,32 @@
+- defaultTab: nodes
+  description: |
+    静的サイトデータ出力
+  executionEnabled: true
+  group: batch/main
+  id: e2e6b5a0-8d9e-41e2-aa3b-c92676ffdf6c
+  loglevel: INFO
+  name: JB1006_build_site
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands: 
+    - jobref:
+        group: batch/unit/build_site
+        name: copy_contents_csv
+        nodeStep: 'true'
+        uuid: d29555de-fbe0-4609-adbe-453844daebaa
+    - jobref:
+        group: batch/unit/build_site
+        name: build_staticsite_data
+        nodeStep: 'true'
+        uuid: 2844d761-708c-49fc-9097-57970148c89e
+    - jobref:
+        group: batch/unit/build_site
+        name: create_staticsite_data_zip
+        nodeStep: 'true'
+        uuid: 0163943b-e5e0-40b4-a35b-852f1c7de5e5
+    keepgoing: false
+    strategy: node-first
+  uuid: e2e6b5a0-8d9e-41e2-aa3b-c92676ffdf6c

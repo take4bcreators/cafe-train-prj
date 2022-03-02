@@ -22,10 +22,6 @@ export SQL_DIR="${BATCH_DIR}/sql"
 export EKIDATAJP_DIR="${CSV_DIR}/ekidatajp"
 export COM_SHELL_DIR="${SHELL_DIR}/common"
 
-# SSG関連ディレクトリ
-export SSG_DATA_DIR="${SSG_DIR}/src/data"
-export SSG_PUBLIC_DIR="${SSG_DIR}/public"
-
 # ファイルパス
 export COMMON_LIB_SH="${CONFIG_DIR}/common_lib.sh"
 export DOT_ENV="${ENV_DIR}/.env"

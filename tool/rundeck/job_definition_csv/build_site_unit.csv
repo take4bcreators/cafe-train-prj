@@ -1,0 +1,4 @@
+UUID,JOBDIR,JOBNAME,JOBDESC,SHLPATH
+d29555de-fbe0-4609-adbe-453844daebaa,batch/unit/build_site,copy_contents_csv,コンテンツCSVコピー,/usr/local/gitrepos/cafe-train-prj/batch/shell/build_site/copy_contents_csv.sh
+2844d761-708c-49fc-9097-57970148c89e,batch/unit/build_site,build_staticsite_data,静的サイトデータビルド,/usr/local/gitrepos/cafe-train-prj/batch/shell/build_site/build_staticsite_data.sh
+0163943b-e5e0-40b4-a35b-852f1c7de5e5,batch/unit/build_site,create_staticsite_data_zip,静的サイトデータZIP作成,/usr/local/gitrepos/cafe-train-prj/batch/shell/build_site/create_staticsite_data_zip.sh
