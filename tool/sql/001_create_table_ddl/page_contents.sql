@@ -1,8 +1,8 @@
 CREATE TABLE :schema.page_contents (
     seq SERIAL NOT NULL,
-    cp_cd INTEGER NOT NULL,
-    ln_cd INTEGER,
-    st_cd INTEGER,
+    cp_cd TEXT NOT NULL,
+    ln_cd TEXT,
+    st_cd TEXT,
     cp_name TEXT NOT NULL,
     ln_name TEXT NOT NULL,
     st_name TEXT NOT NULL,

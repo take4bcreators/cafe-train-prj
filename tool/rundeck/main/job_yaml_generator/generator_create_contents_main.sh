@@ -3,7 +3,7 @@
 # 機能ごとにファイルを用意して指定する
 input_csv='../../job_definition_csv/create_contents_unit.csv'
 output_yaml='../yaml/create_contents_main.yaml'
-main_job_name='create_contents'
+main_job_name='JB1005_create_contents'
 
 # 固定指定
 template_ref_yaml='./job_ref_template.yaml'

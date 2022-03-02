@@ -4,8 +4,8 @@ export MOD_GRP_NAME="create_request"
 #########################
 # ファイルパス定義
 #########################
-export GRP_TARGET_LINE_CSV="${CSV_DIR}/mst_fetch_target_line.csv"
-export GRP_TARGET_CHAIN_CSV="${CSV_DIR}/mst_fetch_target_chain.csv"
+export GRP_TARGET_LINE_CSV="${CSV_DIR}/target/fetch_target_line.csv"
+export GRP_TARGET_CHAIN_CSV="${CSV_DIR}/target/fetch_target_chain.csv"
 export GRP_CAFE_MST_CSV="${CSV_DIR}/mst_cafe_chain.csv"
 export GRP_REQUEST_CSV="${DATA_DIR}/placesapi_request_data.csv"
 export GRP_REQUEST_REPORT="${DATA_DIR}/request_data_report.txt"

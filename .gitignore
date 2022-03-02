@@ -20,6 +20,11 @@ work/*
 # 駅データJP CSVデータ
 batch/csv/ekidatajp/*
 
+# 実行時用 CSVデータ
+batch/csv/target/fetch_target_chain.csv
+batch/csv/target/fetch_target_line.csv
+batch/csv/target/page_create_target_line.csv
+
 # Gatsby側の data フォルダ内
 ssg/src/data/*
 
