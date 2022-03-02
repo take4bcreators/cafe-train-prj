@@ -86,7 +86,7 @@ log_msg ${INFO} "作業ディレクトリ：$(pwd)"
 
 # ビルド実行
 BUILD_TMP_LOG_PATH="${MOD_LOG_DIR}/${BUILD_TMP_LOG_NAME}"
-gatsby build > "${BUILD_TMP_LOG_PATH}" 2>&1
+sudo gatsby build > "${BUILD_TMP_LOG_PATH}" 2>&1
 status=$?
 
 if [ ${status} -ne 0 ]; then
