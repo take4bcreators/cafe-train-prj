@@ -4,3 +4,4 @@ f12b309c-1963-4d85-8147-2a1de9bb9fc5,batch/main,JB1002_create_request,PlaceAPI�
 ebca8262-d06c-4125-9241-6ace480fbb3b,batch/main,JB1003_execution_placesapi,PlaceAPIリクエスト実行
 e6487b18-0f13-4104-8158-ff8bcccf3a2d,batch/main,JB1004_create_ekicafe,駅カフェ情報作成
 aefbdf14-d26c-44e1-9e96-9dffb60e553c,batch/main,JB1005_create_contents,サイトページコンテンツ作成
+e2e6b5a0-8d9e-41e2-aa3b-c92676ffdf6c,batch/main,JB1006_build_site,静的サイトデータ出力
