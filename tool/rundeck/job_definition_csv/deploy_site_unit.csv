@@ -1,0 +1,3 @@
+UUID,JOBDIR,JOBNAME,JOBDESC,SHLPATH
+9ac9b88b-d819-4a0c-9947-36b2a0ed1dc7,batch/unit/deploy_site,deploy_site,サイトデプロイ,/usr/local/gitrepos/cafe-train-prj/batch/shell/deploy_site/deploy_site.sh
+3fb3f677-debb-48d9-b28b-e54eceaf5ebf,batch/unit/deploy_site,export_site_status_report,サイトステータスレポート出力,/usr/local/gitrepos/cafe-train-prj/batch/shell/deploy_site/export_site_status_report.sh
