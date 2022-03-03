@@ -1,0 +1,27 @@
+- defaultTab: nodes
+  description: |
+    サイト公開
+  executionEnabled: true
+  group: batch/main
+  id: b0974b2c-9221-4eaa-9a98-51f935ad9d0b
+  loglevel: INFO
+  name: JB1007_deploy_site
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands: 
+    - jobref:
+        group: batch/unit/deploy_site
+        name: deploy_site
+        nodeStep: 'true'
+        uuid: 9ac9b88b-d819-4a0c-9947-36b2a0ed1dc7
+    - jobref:
+        group: batch/unit/deploy_site
+        name: export_site_status_report
+        nodeStep: 'true'
+        uuid: 3fb3f677-debb-48d9-b28b-e54eceaf5ebf
+    keepgoing: false
+    strategy: node-first
+  uuid: b0974b2c-9221-4eaa-9a98-51f935ad9d0b

@@ -1,0 +1,36 @@
+- defaultTab: nodes
+  description: |
+    サイトデプロイ
+  executionEnabled: true
+  group: batch/unit/deploy_site
+  id: 9ac9b88b-d819-4a0c-9947-36b2a0ed1dc7
+  loglevel: INFO
+  name: deploy_site
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/deploy_site/deploy_site.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 9ac9b88b-d819-4a0c-9947-36b2a0ed1dc7
+- defaultTab: nodes
+  description: |
+    サイトステータスレポート出力
+  executionEnabled: true
+  group: batch/unit/deploy_site
+  id: 3fb3f677-debb-48d9-b28b-e54eceaf5ebf
+  loglevel: INFO
+  name: export_site_status_report
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - scriptfile: /usr/local/gitrepos/cafe-train-prj/batch/shell/deploy_site/export_site_status_report.sh
+    keepgoing: false
+    strategy: node-first
+  uuid: 3fb3f677-debb-48d9-b28b-e54eceaf5ebf
