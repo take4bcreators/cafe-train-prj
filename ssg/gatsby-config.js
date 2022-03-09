@@ -6,6 +6,11 @@
 
 module.exports = {
   /* Your site config here */
+  siteMetadata: {
+    title: `Cafein`,
+    description: `駅周辺のカフェ情報を一覧化したマップを公開するサイト`,
+    lang: `ja`,
+  },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
