@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 挙動変更用変数
-db_schema='dev'
+db_schema='prd'
 db_name='cafeindb001'
 db_user='cafe'
 tablelist_file='./tablelist.txt'
