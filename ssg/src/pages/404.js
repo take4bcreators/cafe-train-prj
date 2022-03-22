@@ -2,17 +2,22 @@ import React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-const page404 = () => (
+const page404 = ({ location }) => (
     <Layout>
         <Seo
             pagetitle="ページが見つかりません"
             pagedesc=""
-            pagescript=""
+            pagepath={location.pathname}
+            pagescript="page404-script.js"
             pagecolor=""
         />
-        <h1 style={{ padding: "20vh 0", textAlign: "center" }}>
+        <main className="page-404">
+        <section>
+            <h1>
             お探しのページが見つかりませんでした
-        </h1>
+            </h1>
+        </section>
+        </main>
     </Layout>
 )
 
