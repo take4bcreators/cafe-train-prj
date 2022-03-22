@@ -1,18 +1,38 @@
-
 # セットアップ時の情報
+
+## yarn のインストール
+
+```bash
+npm install -g yarn
+```
+
+## yarn で gatsby-cli をインストール
+
+- 詳細：https://www.gatsbyjs.com/docs/glossary/yarn/
+
+```bash
+yarn global add gatsby-cli
+```
+
+
+## Gatsby のデフォルトパッケージマネージャーの変更
+
+`~/.config/gatsby/config.json` ファイルに、
+次の行を追加する。
+
+```json
+{
+  "cli": {
+    "packageManager": "yarn"
+  }
+}
+```
 
 ## プロジェクトの新規作成
 
 ```bash
 # コマンド投下
 gatsby new ssg https://github.com/gatsbyjs/gatsby-starter-hello-world
-```
-
-
-## yarn のインストール
-
-```bash
-npm install -g yarn
 ```
 
 
@@ -31,7 +51,7 @@ yarn add gatsby-plugin-react-helmet react-helmet
 ファイルを扱うためのプラグインの導入
 
 ```bash
-npm install gatsby-source-filesystem
+yarn add gatsby-source-filesystem
 ```
 
 gatsby-config.js の plugins に、
@@ -43,11 +63,12 @@ gatsby-config.js の plugins に、
       options: {
         name: `data`,
         path: `${__dirname}/src/data/`,
+      },
     },
 ```
 
-path に扱うファイルのディレクトリを指定する。
-
+- path に扱うファイルのディレクトリを指定する。
+- 指定したパス（この場合は /src/data/ ）が存在しない場合は gatsby develop でエラーとなるので注意
 
 
 ## gatsby-transformer-csv の導入
@@ -55,7 +76,7 @@ path に扱うファイルのディレクトリを指定する。
 CSVを読み込むためのプラグインの導入
 
 ```bash
-npm install gatsby-transformer-csv
+yarn add gatsby-transformer-csv
 ```
 
 インストール後、gatsby-config.js の plugins に、
@@ -64,6 +85,66 @@ npm install gatsby-transformer-csv
 ```js
     `gatsby-transformer-csv`,
 ```
+
+
+## fortawesome プラグインの導入
+
+Fort Awesome のアイコンを使用する場合ため、
+プラグインを導入する。
+
+```bash
+# react-fontawesome 関連のインストール
+yarn add @fortawesome/fontawesome-svg-core
+yarn add @fortawesome/react-fontawesome
+
+# アイコンのインストール
+# 使用するものに応じて、「solid」「regular」「brands」をインストールする
+# すでに HTML で使用している場合は i 要素の class 名に情報がある
+yarn add @fortawesome/free-brands-svg-icons
+```
+
+
+
+## Google Analytics 用プラグインの導入
+
+下記コマンド投下で、 `gatsby-plugin-google-gtag` をインストールする。
+
+```bash
+# プラグインのインストール
+yarn add gatsby-plugin-google-gtag
+```
+
+gatsby-config.js で 下記を参考に記述を追加する。
+※ この際、plugins のすぐ下に設定しないと、
+うまく作動しないことがあるので、gatsby-plugin-google-gtag は、一番目に設定する。
+
+```js
+module.exports = {
+  plugins: [
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [process.env.GATSBY_TRACKING_ID],
+      },
+    },
+  ],
+}
+```
+
+#### .env.development ファイルの作成
+- ルート直下に `.env.development` と `.env.production` ファイルを作成する。
+- ファイルの中に、`GATSBY_TRACKING_ID = G-xxxxxxx` を入力する（G-xxxxxxx は Google アナリティクス で取得した測定ID）。
+
+#### gatsby-config.js への記述
+- `gatsby-config.js` に以下の内容を記述する （ `module.exports =` の前に記述する）
+
+```js
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+```
+
+※ 覚書も併せて参照
 
 
 
