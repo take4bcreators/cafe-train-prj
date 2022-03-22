@@ -689,18 +689,6 @@ header.site-header img, header.site-header svg {
 .splash-container.page {
   background: var(--line-color);
   opacity: 1;
-  -webkit-animation-name: whitepagein;
-          animation-name: whitepagein;
-  -webkit-animation-duration: 0.2s;
-          animation-duration: 0.2s;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
 }
 
 .splash-container.page.hide {
