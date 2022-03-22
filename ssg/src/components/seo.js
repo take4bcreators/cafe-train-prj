@@ -42,7 +42,7 @@ const Seohelmet = (props) => {
     const url = props.pagepath ? `${data.site.siteMetadata.siteUrl}${props.pagepath}` : data.site.siteMetadata.siteUrl
     
     // OGP用画像情報組み立て
-    const imgurl = `${data.site.siteMetadata.siteUrl}/thumb.png`
+    const imgurl = `${data.site.siteMetadata.siteUrl}/images/thumb.png`
     const imgw = 1200
     const imgh = 630
     
