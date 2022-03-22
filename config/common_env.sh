@@ -32,7 +32,7 @@ export DOT_ENV="${ENV_DIR}/.env"
 #########################
 export DB_NAME="cafeindb001"
 export DB_USER="cafe"
-export DB_SCHEMA="dev"
+export DB_SCHEMA="prd"
 
 
 #########################
