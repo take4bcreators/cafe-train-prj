@@ -56,6 +56,9 @@ const Seohelmet = (props) => {
             {/* canonical */}
             <link rel="canonical" href={url} />
             
+            {/* iOS ICON */}
+            <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+            
             {/* OGP */}
             <meta property="og:site_name" content={data.site.siteMetadata.title} />
             <meta property="og:title" content={title} />
