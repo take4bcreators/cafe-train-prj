@@ -12,11 +12,14 @@ const page404 = ({ location }) => (
             pagecolor=""
         />
         <main className="page-404">
-        <section>
-            <h1>
-            お探しのページが見つかりませんでした
-            </h1>
-        </section>
+            <div className="page404img">
+                <img src="images/img404.png" alt="" />
+            </div>
+            <section>
+                <h1>
+                お探しのページが見つかりませんでした
+                </h1>
+            </section>
         </main>
     </Layout>
 )

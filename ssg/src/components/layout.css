@@ -1961,8 +1961,29 @@ div.menu-container .menu-body .menu-body-logo img, div.menu-container .menu-body
   }
 }
 
+main.page-404 {
+  height: 70vh;
+}
+
+main.page-404 .page404img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main.page-404 .page404img img {
+  padding-left: 5vmax;
+  width: 20vmax;
+}
+
 main.page-404 h1 {
-  padding: 20vh 0;
+  padding: 10vh 0;
   color: #5a5a5a;
   font-weight: bold;
   font-family: 'Kaisei Decol', serif;
