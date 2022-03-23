@@ -1,6 +1,5 @@
 "use strict";
 
-
 // メニュー関係の要素
 const elMenuBtn         = document.querySelector('.menu-btn');
 const elMenuBody        = document.querySelector('.menu-body');
@@ -18,6 +17,7 @@ const elMenuCompLineListArr  = document.querySelectorAll('li.menu-item.lineselec
 const elSplashContainer = document.querySelector('.splash-container');
 
 
+
 // スプラッシュ画面の設定
 const delayMSec = 500;
 
@@ -30,7 +30,6 @@ setTimeout(() => {
 setTimeout(() => {
     elSplashContainer.style.display = 'none';
 }, delayMSec + 200);
-
 
 
 
@@ -75,13 +74,10 @@ function toggleMenu() {
     });
 }
 
-elMenuBtn.addEventListener('click', () => {
-    toggleMenu();
-});
+elMenuBtn.addEventListener('click', toggleMenu);
+elMenuBody.addEventListener('click', toggleMenu);
 
-elMenuBody.addEventListener('click', () => {
-    toggleMenu();
-});
+
 
 // 「駅カフェ路線図」押下時の表示・アニメーション用
 elMenuRailmapBtn.addEventListener('click', (event) => {
@@ -139,6 +135,8 @@ elMenuCompNameArr.forEach(elMenuCompName => {
         event.stopPropagation();
     });
 });
+
+
 
 // メニュー内のリンク全て
 elMenuItemLinkArr.forEach(elMenuItemLink => {

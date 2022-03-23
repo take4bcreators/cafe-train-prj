@@ -1,6 +1,5 @@
 "use strict";
 
-
 // 要素取得
 const elSplashContainer = document.querySelector('.splash-container');
 const elSplashLogo      = document.querySelector('.splash-container .splash-logo');
@@ -31,7 +30,6 @@ const elHashiraType1    = document.querySelector('.hashira.type1');
 
 
 
-
 // 画面読み込み時のアニメーション
 const delayMSec = 2000;
 
@@ -57,7 +55,6 @@ setTimeout(() => {
 setTimeout(() => {
     elLuxy.classList.add('show');
 }, delayMSec + 300);
-
 
 
 
@@ -104,6 +101,7 @@ function toggleMenu() {
 
 elMenuBtn.addEventListener('click', toggleMenu);
 elMenuBody.addEventListener('click', toggleMenu);
+
 
 
 // 「駅カフェ路線図」押下時の表示・アニメーション用
@@ -255,5 +253,4 @@ function setLuxySpeedX() {
 
 // 読み込み時に発火
 setLuxySpeedX();
-
 

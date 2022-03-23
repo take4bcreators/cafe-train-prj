@@ -1,6 +1,5 @@
 "use strict";
 
-
 // 要素取得
 const elAllStCont  = document.querySelector('.allstations-container');
 const elLnName     = document.querySelector('.lnname');
@@ -52,7 +51,6 @@ setTimeout(() => {
 
 
 
-
 // ライン高さの自動調節処理
 function resizeLineHeight() {
     const stationsHeight = elAllStCont.clientHeight;
@@ -75,8 +73,6 @@ elTrLineArr.forEach(elTrLine => {
 
 
 
-
-
 // 駅名の文字数に応じてクラスを付与
 elStNameArr.forEach(elStName => {
     const textCont      = elStName.textContent;
@@ -95,7 +91,6 @@ elStNameArr.forEach(elStName => {
 
 
 
-
 // 読み込み時にカフェ存在アニメーション実行
 elCfFlagArr.forEach(elCfFlag => {
     setTimeout(() => {
@@ -105,41 +100,6 @@ elCfFlagArr.forEach(elCfFlag => {
         elCfFlag.classList.add('end');
     }, 2000);
 });
-
-// // absolute の位置取得関数
-// function getAbsPosition(elem) {
-//     let x = 0;
-//     let y = 0;
-//     do {
-//         x += elem.offsetLeft;
-//         y += elem.offsetTop;
-//     } while (elem = elem.offsetParent);
-//     return {'x': x, 'y': y};
-// }
-
-// // カフェ存在アイコンの表示アニメーション実行関数
-// function animationCfFlag(topValue, delayMSec) {
-//     elCfFlagArr.forEach(elCfFlag => {
-//         const absPosition = getAbsPosition(elCfFlag);
-//         const elemTop = absPosition['y'] - 50;
-//         const windowHeight = window.innerHeight;
-        
-//         if (topValue >= elemTop - windowHeight) {
-//             // スクロールなどで見えた時に行う処理
-//             setTimeout(() => {
-//                 elCfFlag.classList.add('show');
-//             }, delayMSec);
-//             setTimeout(() => {
-//                 elCfFlag.classList.add('end');
-//             }, delayMSec + 1000);
-//         } else {
-//             // スクロールなどで見えなくなった時に行う処理
-//         }
-//     });
-// }
-
-// // カフェ存在アイコンの表示アニメーション実行
-// animationCfFlag(0, 1000);
 
 
 
@@ -155,9 +115,6 @@ window.addEventListener('scroll', () => {
         elMainHeader.classList.remove(toggleClassName);
         elMenuBtn.classList.remove(toggleClassName);
     }
-    
-    // カフェ存在アイコンの表示アニメーション実行
-    // animationCfFlag(topValue, 0);
 });
 
 
@@ -193,7 +150,6 @@ replacedText       = replacedText.replace('横浜市営地下鉄', '横浜市営
 replacedText       = replacedText.replace('東京モノレール', '東京モノレール<wbr>');
 replacedText       = replacedText.replace('ライン', '<wbr>ライン');
 elLnName.innerHTML = replacedText;
-
 
 
 
@@ -238,13 +194,10 @@ function toggleMenu() {
     });
 }
 
-elMenuBtn.addEventListener('click', () => {
-    toggleMenu();
-});
+elMenuBtn.addEventListener('click', toggleMenu);
+elMenuBody.addEventListener('click', toggleMenu);
 
-elMenuBody.addEventListener('click', () => {
-    toggleMenu();
-});
+
 
 // 「駅カフェ路線図」押下時の表示・アニメーション用
 elMenuRailmapBtn.addEventListener('click', (event) => {
@@ -303,6 +256,8 @@ elMenuCompNameArr.forEach(elMenuCompName => {
     });
 });
 
+
+
 // メニュー内のリンク全て
 elMenuItemLinkArr.forEach(elMenuItemLink => {
     elMenuItemLink.addEventListener('click', (event) => {
@@ -314,18 +269,7 @@ elMenuItemLinkArr.forEach(elMenuItemLink => {
 
 
 
-
-
-
+// 表示時のアニメーション用
 elSmoothText.classList.add('show');
 elSmoothTextWrap.classList.add('show');
-// // 路線名アニメーションのためのクラス追加
-// setTimeout(() => {
-//     elSmoothText.classList.add('smoothTextAppear');
-// }, 50);
-
-// setTimeout(() => {
-//     // スクロール時のアニメーションのために追加
-//     elSmoothText.classList.add('end');
-// }, 1000);
 
