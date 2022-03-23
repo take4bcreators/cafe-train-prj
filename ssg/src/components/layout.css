@@ -781,12 +781,12 @@ header.site-header img, header.site-header svg {
           transform: scale(1, 1);
 }
 
-.splash-container.about, .splash-container.policy {
+.splash-container.about, .splash-container.policy, .splash-container.page-cover {
   background: #f6f6f6;
   opacity: 1;
 }
 
-.splash-container.about.hide, .splash-container.policy.hide {
+.splash-container.about.hide, .splash-container.policy.hide, .splash-container.page-cover.hide {
   opacity: 0;
   -webkit-animation-name: fadeout;
           animation-name: fadeout;

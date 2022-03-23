@@ -46,6 +46,8 @@ const Linepage = ({ data, location }) => {
         pagescript="page-script.js"
         pagecolor={nodes[0].ln_color}
       />
+      <div className="splash-container page-cover">
+      </div>
       <div className="splash-container page">
         <div className="splash-logo">
           <span className="smooth-text-wrap">

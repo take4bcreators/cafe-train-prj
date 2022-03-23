@@ -23,10 +23,11 @@ const elMenuCompNameArr      = document.querySelectorAll('li.menu-item.lineselec
 const elMenuCompLineListArr  = document.querySelectorAll('li.menu-item.lineselect .linelist .linecompany>ul');
 
 // スプラッシュ画面関係要素
-const elSplashContainer = document.querySelector('.splash-container');
-const elSplashLogo      = document.querySelector('.splash-container .splash-logo');
-const elSmoothTextWrap  = document.querySelector('.smooth-text-wrap');
-const elSmoothText      = document.querySelector('.smooth-text');
+const elSplashContainer      = document.querySelector('.splash-container.page');
+const elSplashLogo           = document.querySelector('.splash-container .splash-logo');
+const elSmoothTextWrap       = document.querySelector('.smooth-text-wrap');
+const elSmoothText           = document.querySelector('.smooth-text');
+const elSplashContainerCover = document.querySelector('.splash-container.page-cover');
 
 // カフェ存在アイコン
 const elCfFlagArr  = document.querySelectorAll('.cfflag');
@@ -39,12 +40,14 @@ const delayMSec = 1000;
 // 要素を非表示にする
 setTimeout(() => {
     elSplashContainer.classList.add('hide');
+    elSplashContainerCover.classList.add('hide');
     elSplashLogo.classList.add('hide');
 }, delayMSec);
 
 // 要素自体を消す
 setTimeout(() => {
     elSplashContainer.style.display = 'none';
+    elSplashContainerCover.style.display = 'none';
 }, delayMSec + 200);
 
 
