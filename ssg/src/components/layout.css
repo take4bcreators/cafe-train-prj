@@ -1421,6 +1421,8 @@ footer.site-footer ul.sns {
 footer.site-footer ul.sns li {
   list-style: none;
   padding: 0 0.6rem;
+  font-size: 39px;
+  line-height: 1;
 }
 
 @media (max-width: 480px) {
@@ -1429,13 +1431,19 @@ footer.site-footer ul.sns li {
   }
 }
 
+@media (max-width: 480px) {
+  footer.site-footer ul.sns li {
+    font-size: 29px;
+  }
+}
+
 footer.site-footer ul.sns li svg {
-  width: 35px;
+  height: 39px;
 }
 
 @media (max-width: 480px) {
   footer.site-footer ul.sns li svg {
-    width: 25px;
+    height: 29px;
   }
 }
 
