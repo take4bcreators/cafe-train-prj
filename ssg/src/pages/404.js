@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import { StaticImage } from "gatsby-plugin-image";
 
 const page404 = ({ location }) => (
     <Layout>
@@ -13,7 +14,12 @@ const page404 = ({ location }) => (
         />
         <main className="page-404">
             <div className="page404img">
-                <img src="images/img404.png" alt="" />
+                <StaticImage
+                    src="../images/img404.png"
+                    width={600}
+                    alt="img404"
+                    placeholder="blurred" // ボヤッと読み込ませるオプション
+                />
             </div>
             <section>
                 <h1>

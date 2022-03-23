@@ -148,3 +148,49 @@ require("dotenv").config({
 
 
 
+
+## 画像用プラグインの導入
+
+### プラグインの導入
+
+- gatsby-plugin-image
+- gatsby-plugin-sharp
+- gatsby-transformer-sharp
+
+※ gatsby-image は非推薦になったらしいので未導入。さらに GraphQL 不要。
+
+```bash
+# プラグインのインストール
+yarn add gatsby-plugin-image gatsby-plugin-sharp gatsby-transformer-sharp
+```
+
+#### gatsby-config.js への記述
+
+下記のように追加する。
+
+```js
+module.exports = {
+  plugins: [
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
+      },
+    },
+  ],
+}
+```
+
+※ gatsby-source-filesystem は他に項目があっても name をわければ問題なし
+
+
+### 参考リンク
+- [Gatsby の新しい画像プラグイン](https://zenn.dev/kaito18/articles/1b7a813375ac69)
+- [gatsby\-image が非推奨になり gatsby\-plugin\-image に推奨されていたので使い方を解説してみた \- Qiita](https://qiita.com/akifumii/items/ccb5c93b3d962f9e4f3f)
+- [GatsbyJS の画像の扱いが至極簡単になった \| gatsby\-plugin\-image への進化 \| typememo\.jp](https://typememo.jp/tech/gatsby-image-evolution-gatsby-plugin-image/)
+- [Gatsbyで2種類のマークダウンファイルの区別する方法Takumon Blog](https://takumon.com/how-to-distinct-2-kinds-of-markdown-in-gatsby)
+
