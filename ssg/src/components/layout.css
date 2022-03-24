@@ -855,6 +855,13 @@ main header.main-header {
   }
 }
 
+@media (max-width: 480px) {
+  main header.main-header {
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+  }
+}
+
 main header.main-header.is-scroll {
   padding: 0 55vw 0 20vw;
   font-size: min(0.7rem, 1.6vw);
@@ -872,9 +879,12 @@ main header.main-header.is-scroll {
 
 @media (max-width: 480px) {
   main header.main-header.is-scroll {
-    padding: 11vw 65vw 0 8vw;
-    line-height: 0.7rem;
-    font-size: 0.3rem;
+    padding: 0 65vw 0 8vw;
+    font-size: min(1.3rem, 3vw);
+    line-height: 1.6rem;
+    height: min(7rem, 15vw);
+    -webkit-transform: scale(0.5) translate(-40vw, 18vw);
+            transform: scale(0.5) translate(-40vw, 18vw);
   }
 }
 

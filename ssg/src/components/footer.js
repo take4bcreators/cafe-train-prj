@@ -3,7 +3,6 @@ import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
     faTwitter,
-    faFacebookSquare,
     faInstagram
 } from "@fortawesome/free-brands-svg-icons"
 
@@ -12,13 +11,14 @@ const footer =  () => (
     <footer className="site-footer">
         <ul className="sns">
             <li>
-                <FontAwesomeIcon icon={faTwitter} />
+                <a href="https://twitter.com/take4b_info">
+                    <FontAwesomeIcon icon={faTwitter} />
+                </a>
             </li>
             <li>
-                <FontAwesomeIcon icon={faFacebookSquare} />
-            </li>
-            <li>
-                <FontAwesomeIcon icon={faInstagram} />
+                <a href="/">
+                    <FontAwesomeIcon icon={faInstagram} />
+                </a>
             </li>
         </ul>
         <div className="pagelink">
