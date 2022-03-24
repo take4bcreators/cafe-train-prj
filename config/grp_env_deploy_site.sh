@@ -18,7 +18,7 @@ export NL_PRD_SITE_ID="take4b-cafein.netlify.app"
 export NL_DEV_SITE_ID="musing-heyrovsky-98930a.netlify.app"
 
 # デプロイフラグ（1:本番サイト/2:検証用サイト）
-export DEPLOY_PRD_DEV_FLAG="1"
+export DEPLOY_PRD_DEV_FLAG="2"
 
 # デプロイ時の一時ログのファイル名
 export NL_DEPLOY_RES_LOG_NAME="deploy_curl_res.log"
