@@ -16,7 +16,7 @@ const footer =  () => (
                 </a>
             </li>
             <li>
-                <a href="/">
+                <a href="https://www.instagram.com/take4b_cafein/">
                     <FontAwesomeIcon icon={faInstagram} />
                 </a>
             </li>
