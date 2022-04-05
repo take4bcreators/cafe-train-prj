@@ -1512,7 +1512,7 @@ div.linelist.index {
   margin: 10vh 30vw;
   top: 350vh;
   z-index: 200;
-  overflow: scroll;
+  overflow: auto;
   color: #282828;
   font-size: 1.5vmax;
   font-weight: normal;
