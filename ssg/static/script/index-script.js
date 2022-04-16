@@ -218,39 +218,19 @@ window.addEventListener('scroll', () => {
     
     const execValScale02 = 1.1;
     const execVal02 = windowHeight * execValScale02;
-    if (scrollValue >= execVal02) {
+    const execValScale04 = 2.8;
+    const execVal04 = windowHeight * execValScale04;
+    if (scrollValue >= execVal02 && scrollValue <= execVal04) {
         elMainMsgType1.classList.add('show');
     } else {
         elMainMsgType1.classList.remove('show');
     }
     
-    const execValScale03 = 2.5;
+    const execValScale03 = 0.7;
     const execVal03 = windowHeight * execValScale03;
-    if (scrollValue >= execVal03) {
-        elMainImg.classList.add('hide');
+    if (scrollValue >= execVal03 && scrollValue <= execVal04) {
+        elMainImg.classList.add('show');
     } else {
-        elMainImg.classList.remove('hide');
+        elMainImg.classList.remove('show');
     }
 });
-
-
-
-// Luxy の横移動調整関数
-function setLuxySpeedX() {
-    // ウィンドウの横幅を取得
-    const windowWidth = window.innerWidth;
-    
-    // メインイメージの横移動距離変換（横幅 1440 の時、-12）
-    const mainImgSpeedX = valueRemap(windowWidth, 0, 1440, 0, -12);
-    
-    // 柱1の横移動距離変換（横幅 1440 の時、2）
-    const hashiraType1SpeedX = valueRemap(windowWidth, 0, 1440, 0, 2);
-    
-    // 属性セット
-    elMainImg.setAttribute('data-speed-x', mainImgSpeedX);
-    elHashiraType1.setAttribute('data-speed-x', hashiraType1SpeedX);
-}
-
-// 読み込み時に発火
-setLuxySpeedX();
-

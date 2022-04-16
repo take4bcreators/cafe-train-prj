@@ -2139,41 +2139,64 @@ main.page-about .thanks {
 
 #luxy .bg_grid img, #luxy .bg_grid svg {
   width: 100vw;
+  height: auto;
+}
+
+@media (max-width: 680px) {
+  #luxy .bg_grid img, #luxy .bg_grid svg {
+    width: auto;
+    height: 230vh;
+  }
+}
+
+@media (max-width: 480px) {
+  #luxy .bg_grid img, #luxy .bg_grid svg {
+    width: auto;
+    height: 230vh;
+  }
 }
 
 #luxy .mainimg {
   position: absolute;
   width: unset;
-  top: 80vh;
-  left: 50vw;
+  top: 76vh;
+  left: 24vw;
   z-index: 150;
-  -webkit-filter: blur(0px);
-          filter: blur(0px);
-  -webkit-transition: -webkit-filter 2s;
-  transition: -webkit-filter 2s;
-  transition: filter 2s;
-  transition: filter 2s, -webkit-filter 2s;
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+  opacity: 0;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
 }
 
 #luxy .mainimg img {
-  width: 15vmax;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  width: 20vmax;
+  height: auto;
   -webkit-filter: drop-shadow(7px 10px 7px #b6bbbb);
           filter: drop-shadow(7px 10px 7px #b6bbbb);
   -webkit-transition: all 2s;
   transition: all 2s;
 }
 
-#luxy .mainimg.hide {
-  -webkit-filter: blur(10px);
-          filter: blur(10px);
-  position: fixed;
+@media (max-width: 480px) {
+  #luxy .mainimg {
+    left: calc(50vw - 10vmax);
+    top: 65vh;
+  }
+  #luxy .mainimg img {
+    width: 20vmax;
+    height: auto;
+  }
 }
 
-#luxy .mainimg.hide img {
-  -webkit-transform: translate(50%, 50%) scale(1.2);
-          transform: translate(50%, 50%) scale(1.2);
+#luxy .mainimg.show {
+  -webkit-filter: blur(0px);
+          filter: blur(0px);
+  opacity: 1;
+  -webkit-transition: -webkit-filter 1s;
+  transition: -webkit-filter 1s;
+  transition: filter 1s;
+  transition: filter 1s, -webkit-filter 1s;
 }
 
 #luxy .hashira.type1 {
@@ -2236,7 +2259,7 @@ main.page-about .thanks {
 
 #luxy .mainmsg.type1 {
   position: absolute;
-  top: 110vh;
+  top: 130vh;
   left: 50vw;
   z-index: 140;
   font-family: 'Kaisei Opti', serif;
@@ -2247,6 +2270,14 @@ main.page-about .thanks {
   opacity: 0;
   -webkit-transition: opacity 1s;
   transition: opacity 1s;
+}
+
+@media (max-width: 480px) {
+  #luxy .mainmsg.type1 {
+    left: 4vw;
+    padding: 0 5vw;
+    text-align: center;
+  }
 }
 
 #luxy .mainmsg.type1.show {
@@ -2297,14 +2328,14 @@ main.page-about .thanks {
 #luxy .maintext {
   position: absolute;
   width: unset;
-  top: 45vh;
+  top: 50vh;
   left: 50vw;
   z-index: 110;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  color: #3e3e3e;
-  font-family: 'Kaisei Opti', serif;
-  font-weight: 500;
+  color: #1d5053;
+  font-family: 'Fredericka the Great', cursive;
+  font-weight: 400;
   text-align: center;
 }
 
@@ -2318,8 +2349,9 @@ main.page-about .thanks {
 }
 
 #luxy .maintext div.maintext-wrap p {
-  font-size: 3vmax;
+  font-size: 6vmax;
   margin: 0 0.5vmax;
+  height: 12vh;
 }
 
 #luxy .maintext div.maintext-wrap.text-x {

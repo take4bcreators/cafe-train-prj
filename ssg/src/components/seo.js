@@ -78,7 +78,7 @@ const Seohelmet = (props) => {
             {/* Google Fonts */}
             <link rel="preconnect" href="https://fonts.googleapis.com" />
             <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
-            <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@400;500;700&family=Kaisei+Opti:wght@400;500;700&family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet" />
+            <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100;200;300;400;500;700;800;900&family=Fredericka+the+Great&family=Julius+Sans+One&family=Kaisei+Decol:wght@400;500;700&family=Kaisei+Opti:wght@400;500;700&family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet" />
             
             {/* ページ別スタイル */}
             <style>{rootcss}</style>
