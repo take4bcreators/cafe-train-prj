@@ -35,16 +35,28 @@ export const query = graphql`
 `
 
 // JSXページデータ
-const Linepage = ({ data }) => {
+const Linepage = ({ data, location }) => {
   const { nodes } = data.allPageContentsCsv;
   return (
     <Layout>
       <Seo
         pagetitle={nodes[0].ln_name}
         pagedesc="駅周辺のカフェ情報を一覧化したマップを公開するサイト"
+        pagepath={location.pathname}
         pagescript="page-script.js"
         pagecolor={nodes[0].ln_color}
       />
+      <div className="splash-container page-cover">
+      </div>
+      <div className="splash-container page">
+        <div className="splash-logo">
+          <span className="smooth-text-wrap">
+            <span className="smooth-text">
+              {nodes[0].ln_name}
+            </span>
+          </span>
+        </div>
+      </div>
       <main>
         <header className="main-header">
           <h1 className="lnname">{nodes[0].ln_name}</h1>
@@ -72,9 +84,9 @@ const Linepage = ({ data }) => {
           </div>
           <div className="allstations-container">
             {
-              nodes.map(node => {
+              nodes.map((node, index) => {
                 return (
-                  <div className="station-container">
+                  <div className="station-container" key={index}>
                     <div className="stinfo-container">
                       <p className="stno">{node.st_num}</p>
                       <h1 className="stname">{node.st_name}</h1>

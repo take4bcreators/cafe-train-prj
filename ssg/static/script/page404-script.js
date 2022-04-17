@@ -1,10 +1,5 @@
 "use strict";
 
-// 要素取得
-const elSplashContainer = document.querySelector('.splash-container');
-const elSplashLogo      = document.querySelector('.splash-container .splash-logo');
-const elSplashSvg       = document.querySelector('.splash-container .splash-logo svg');
-
 // メニュー関係の要素
 const elMenuBtn         = document.querySelector('.menu-btn');
 const elMenuBody        = document.querySelector('.menu-body');
@@ -17,44 +12,6 @@ const elMenuRailmapBtn       = document.querySelector('li.menu-item.lineselect p
 const elMenuLineList         = document.querySelector('li.menu-item.lineselect .linelist');
 const elMenuCompNameArr      = document.querySelectorAll('li.menu-item.lineselect .linelist .linecompany>h1');
 const elMenuCompLineListArr  = document.querySelectorAll('li.menu-item.lineselect .linelist .linecompany>ul');
-
-// トップページの路線選択関係の要素
-const elDetailsArr  = document.querySelectorAll('.linelist.index details');
-
-// トップページ装飾用
-const elHumikiriBar     = document.querySelector('.humikiri_bar svg');
-const elMainMsgType1    = document.querySelector('.mainmsg.type1');
-const elLuxy            = document.querySelector('#luxy');
-const elMainImg         = document.querySelector('.mainimg');
-const elHashiraType1    = document.querySelector('.hashira.type1');
-
-
-
-// 画面読み込み時のアニメーション
-const delayMSec = 2000;
-
-// SVGアニメーションの開始
-// 開発時の Safari 表示のため、少し遅らせてスタート
-setTimeout(() => {
-    elSplashSvg.classList.add('active');
-}, 100);
-
-// 要素を非表示にする
-setTimeout(() => {
-    elSplashContainer.classList.add('hide');
-    elSplashLogo.classList.add('hide');
-}, delayMSec);
-
-// 要素自体を消す
-setTimeout(() => {
-    elSplashContainer.style.display = 'none';
-    elSplashSvg.classList.remove('active');
-}, delayMSec + 200);
-
-// ロード時ブラーアニメーション用
-setTimeout(() => {
-    elLuxy.classList.add('show');
-}, delayMSec + 300);
 
 
 
@@ -161,6 +118,8 @@ elMenuCompNameArr.forEach(elMenuCompName => {
     });
 });
 
+
+
 // メニュー内のリンク全て
 elMenuItemLinkArr.forEach(elMenuItemLink => {
     elMenuItemLink.addEventListener('click', (event) => {
@@ -170,67 +129,3 @@ elMenuItemLinkArr.forEach(elMenuItemLink => {
     });
 });
 
-
-
-// トップページの路線選択画面の ＋ アイコン処理
-elDetailsArr.forEach(elDetails => {
-    elDetails.addEventListener('toggle', () => {
-        if (elDetails.open) {
-            // 開いた際の処理
-            elDetails.classList.add('open');
-        } else {
-            // 閉じた際の処理
-            elDetails.classList.remove('open');
-        }
-    });
-});
-
-
-
-// 数値範囲変換汎用関数（変換対象, 元範囲最小, 元範囲最大, 新範囲最小, 新範囲最大）
-function valueRemap(targetNumber, oldFrom, oldTo, newFrom, newTo) {
-    const oldDiff = oldTo - targetNumber
-    const oldRange = oldTo - oldFrom
-    const newRange = newTo - newFrom
-    const percentage = oldDiff / oldRange
-    const newDiff = percentage * newRange
-    const rs = newTo - newDiff
-    return rs
-}
-
-
-
-// スクロールした際のイベント
-window.addEventListener('scroll', () => {
-    // スクロール位置
-    const scrollValue = document.scrollingElement.scrollTop;
-    
-    // ウィンドウの高さ取得
-    const windowHeight = window.innerHeight;
-    
-    const execValScale01 = 2.2;
-    const execVal01 = windowHeight * execValScale01;
-    if (scrollValue >= execVal01) {
-        elHumikiriBar.classList.add('open');
-    } else {
-        elHumikiriBar.classList.remove('open');
-    }
-    
-    const execValScale02 = 1.1;
-    const execVal02 = windowHeight * execValScale02;
-    const execValScale04 = 2.8;
-    const execVal04 = windowHeight * execValScale04;
-    if (scrollValue >= execVal02 && scrollValue <= execVal04) {
-        elMainMsgType1.classList.add('show');
-    } else {
-        elMainMsgType1.classList.remove('show');
-    }
-    
-    const execValScale03 = 0.7;
-    const execVal03 = windowHeight * execValScale03;
-    if (scrollValue >= execVal03 && scrollValue <= execVal04) {
-        elMainImg.classList.add('show');
-    } else {
-        elMainImg.classList.remove('show');
-    }
-});
