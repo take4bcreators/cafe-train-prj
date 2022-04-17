@@ -90,7 +90,7 @@ sudo gatsby build > "${BUILD_TMP_LOG_PATH}" 2>&1
 status=$?
 
 if [ ${status} -ne 0 ]; then
-    log_msg ${ERR} "ファイルコピーでエラーが発生しました"
+    log_msg ${ERR} "サイトデータビルドでエラーが発生しました"
     log_msg ${ERR} "gatsby build コマンド戻り値：${status}"
     log_msg ${ERR} "gatsby build コマンドメッセージ...\n$(cat ${BUILD_TMP_LOG_PATH})"
     delete_std_out_file
